@@ -1,20 +1,21 @@
 import logo from './ui/assets/img/logo/logo-fte-gradient.png';
 import './ui/scss/App.scss';
-import Montserrat from './ui/typography/montserrat';
+import Inter from './ui/typography/inter';
 import { Icon } from './atoms/index';
+import theme from './ui/theme';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Montserrat type="h1">Flat Earth Esports</Montserrat>
+        <Inter type="h1">Flat Earth Esports</Inter>
         <p>
           Non è mai solo un gioco
         </p>
         <Icon
-          type="icon-home"
-          color="red"
+          icon="test"
+          color={theme.colors.primary.light}
           size={21}
           onClick={() => console.log('ciao')}
         />

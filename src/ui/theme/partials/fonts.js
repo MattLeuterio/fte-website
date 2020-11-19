@@ -1,3 +1,3 @@
 export const fonts = {
-  montserrat: '"Montserrat", sans-serif;'
+  inter: '"Inter", sans-serif;'
 };

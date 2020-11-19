@@ -6,7 +6,7 @@ import theme from '../theme';
 
 const baseConfig = {
   color: 'unset',
-  fontFamily: theme.fontset.montserrat,
+  fontFamily: theme.fontset.inter,
   fontStyle: 'normal',
   fontWeight: 400,
   lineHeight: 1,
