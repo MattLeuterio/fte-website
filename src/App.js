@@ -1,23 +1,20 @@
-import logo from './ui/assets/img/logo/logo-fte-gradient.png';
-import './ui/scss/App.scss';
-import Inter from './ui/typography/inter';
-import { Icon } from './atoms/index';
-import theme from './ui/theme';
+import "./ui/scss/App.scss";
+import Inter from "./ui/typography/inter";
+import { Icon } from "./atoms/index";
+import { IconArrowCarousel } from "./ui/assets/icons"
+import logoW from "./ui/assets/img/logo/logo_W.svg";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logoW} className="App-logo" alt={logoW} />
         <Inter type="h1">Flat Earth Esports</Inter>
-        <p>
-          Non è mai solo un gioco
-        </p>
+        <p>Non è mai solo un gioco</p>
         <Icon
-          icon="test"
-          color={theme.colors.primary.light}
-          size={21}
-          onClick={() => console.log('ciao')}
+          icon={IconArrowCarousel}
+          size={50}
+          onClick={() => console.log("click icon")}
         />
         <a
           className="App-link"
