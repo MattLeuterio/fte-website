@@ -19,12 +19,12 @@ const size = {
 };
 
 const device = {
-  mobileS: `(max-width: ${size.mobileM})`,
-  mobileM: `(max-width: ${size.mobileL})`,
-  mobileL: `(max-width: ${size.tablet})`,
-  tablet: `(max-width: ${size.tabletL})`,
-  tabletL: `(max-width: ${size.laptop})`,
-  laptop: `(max-width: ${size.desktop})`,
+  mobileS: `(min-width: ${size.mobileM})`,
+  mobileM: `(min-width: ${size.mobileL})`,
+  mobileL: `(min-width: ${size.tablet})`,
+  tablet: `(min-width: ${size.tabletL})`,
+  tabletL: `(min-width: ${size.laptop})`,
+  laptop: `(min-width: ${size.desktop})`,
   desktop: `(min-width: calc(${size.desktop}) + 1px)`
 };
 

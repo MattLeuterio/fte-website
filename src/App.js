@@ -2,14 +2,16 @@ import "./ui/scss/App.scss";
 import Inter from "./ui/typography/inter";
 import { Icon } from "./atoms/index";
 import { IconArrowCarousel } from "./ui/assets/icons"
+import { withMediaQueries } from "./hoc/withMediaQueries";
 import logoW from "./ui/assets/img/logo/logo_W.svg";
 
-function App() {
+function App({ mediaIsDesktop }) {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logoW} className="App-logo" alt={logoW} />
         <Inter type="h1">Flat Earth Esports</Inter>
+        <h1> {!mediaIsDesktop ? 'mobile' : 'desktop'} </h1>
         <p>Non è mai solo un gioco</p>
         <Icon
           icon={IconArrowCarousel}
@@ -29,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default (withMediaQueries(App));
