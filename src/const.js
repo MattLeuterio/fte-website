@@ -5,4 +5,4 @@ export const HeaderMobileHeight = 90;
 export const FooterMobileHeight = 96;
 
 // Desktop
-export const NavBarWidth = 130;
+export const NavBarWidth = 80;

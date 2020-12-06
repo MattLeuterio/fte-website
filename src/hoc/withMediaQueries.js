@@ -25,10 +25,8 @@ export function withMediaQueries(LazyComp) {
       function updateSize() {
         setMediaQueries({
           ...mediaQueries,
-          mediaIsPhone: window.innerWidth >= breakpoint.mobileS && window.innerWidth < breakpoint.tablet,
-          mediaIsTablet: window.innerWidth >= breakpoint.tablet && window.innerWidth < breakpoint.laptop,
-          mediaIsLaptop: window.innerWidth >= breakpoint.laptop && window.innerWidth < breakpoint.desktop,
-          mediaIsDesktop: window.innerWidth >= breakpoint.desktop
+          mediaIsPhone: window.innerWidth < breakpoint.mobileL,
+          mediaIsDesktop: window.innerWidth >= breakpoint.tablet
         });
 
         setScreenSizes({
