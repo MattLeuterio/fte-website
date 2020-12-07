@@ -32,4 +32,7 @@ export {
   IconInfo,
   IconJoin,
   IconPeople,
+  IconDiscord,
+  IconInstagram,
+  IconTwitter
 };

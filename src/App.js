@@ -17,9 +17,9 @@ function App() {
   return (
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
-          <Route path="/people" component={People} />
-          <Route path="/join" component={Join} />
-          <Route path="/about" component={About} />
+          <Route exact path="/people" component={People} />
+          <Route exact path="/join" component={Join} />
+          <Route exact path="/about" component={About} />
           <Route exact path="/" component={Home} />
           <Route component={PageNotFound} />
         </Switch> 
