@@ -1,7 +1,13 @@
 import React from "react";
 
-import { MenuMobileContainer } from "./style";
+import { MenuMobileContainer, HeaderMobileContainer } from "./style";
 
-const MenuMobile = () => <MenuMobileContainer></MenuMobileContainer>;
+const MenuMobile = () => (
+  <>
+    <HeaderMobileContainer></HeaderMobileContainer>
+
+    <MenuMobileContainer></MenuMobileContainer>
+  </>
+);
 
 export default MenuMobile;

@@ -1,20 +1,12 @@
 import React from "react";
 import { HomeContainer } from "./style";
-
-import containerVariants from "../../ui/containerVariants";
-import Menu from "../../components/Menu";
+import { PageContainer } from "../../components";
 
 const home = () => {
   return (
-    <HomeContainer
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-    >
-      Home
-      <Menu />
-    </HomeContainer>
+    <PageContainer>
+      <HomeContainer>Home</HomeContainer>
+    </PageContainer>
   );
 };
 

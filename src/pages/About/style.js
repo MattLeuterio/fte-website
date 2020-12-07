@@ -1,6 +1,3 @@
 import styled from 'styled-components';
-import { motion } from "framer-motion";
 
-export const AboutContainer = styled(motion.div)`
-
-`;
+export const AboutContainer = styled.div``;
