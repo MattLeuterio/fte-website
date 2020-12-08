@@ -14,6 +14,14 @@ export const HeaderMobileContainer = styled.div`
   z-index: ${theme.zIndex.menus};
   `;
 
+export const HeaderElementsContainer = styled.div`
+  height: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 export const MenuMobileContainer = styled.div`
   position: fixed;
   bottom: 0;
@@ -23,7 +31,7 @@ export const MenuMobileContainer = styled.div`
   background: ${theme.colors.gradients.dark};
   box-shadow: ${theme.utility.boxShadowUp};
   border-radius: 12px 12px 0px 0px;
-  z-index: ${theme.zIndex.menus}
+  z-index: ${theme.zIndex.menus};
 `;
 
 export const MenuElement = styled.div`

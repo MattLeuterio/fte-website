@@ -1,4 +1,5 @@
 // Base
+import IconFTE from "./icon-fte.png";
 import IconArrowCarousel from "./icon-arrow-carousel.png";
 import IconLookingPerson from "./icon-looking-person.png";
 import IconNotify from "./icon-notify.png";
@@ -20,6 +21,7 @@ import IconInstagram from "./socials/icon-instagram.png";
 import IconTwitter from "./socials/icon-twitter.png";
 
 export {
+  IconFTE,
   IconArrowCarousel,
   IconLookingPerson,
   IconNotify,

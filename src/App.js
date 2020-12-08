@@ -8,6 +8,7 @@ import {
   About,
   Join,
   People,
+  LastResults,
   PageNotFound
 } from './pages'
 
@@ -17,6 +18,7 @@ function App() {
   return (
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
+          <Route exact path="/last-results" component={LastResults} />
           <Route exact path="/people" component={People} />
           <Route exact path="/join" component={Join} />
           <Route exact path="/about" component={About} />

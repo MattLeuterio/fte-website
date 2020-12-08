@@ -4,42 +4,43 @@ import { NavLink } from "react-router-dom";
 import {
   MenuMobileContainer,
   HeaderMobileContainer,
-  MenuElement,
+  HeaderElementsContainer,
 } from "./style";
-import { Icon } from "../../../atoms";
+import { Icon, MenuElements } from "../../../atoms";
 import {
-  IconHome,
-  IconInfo,
-  IconJoin,
-  IconPeople,
+  IconFTE,
   IconResult,
   IconResultActive,
   IconNotify,
-  IconNotifyActive,
+  //IconNotifyActive,
 } from "../../../ui/assets/icons";
 
-const MenuMobile = ({ elements }) => {
-  console.log("props", elements);
+const MenuMobile = () => {
+  const lastResultsPath = "/last-results";
 
   return (
     <>
-      <HeaderMobileContainer></HeaderMobileContainer>
+      <HeaderMobileContainer>
+        <HeaderElementsContainer>
+          <Icon icon={IconNotify} size={20} />
+          <NavLink exact to="/" activeClassName="menuElementIsActive">
+            <Icon icon={IconFTE} size={60} />
+          </NavLink>
+          <NavLink to="/last-results" activeClassName="menuElementIsActive">
+            <Icon
+              icon={
+                window.location.pathname === lastResultsPath
+                  ? IconResultActive
+                  : IconResult
+              }
+              size={20}
+            />
+          </NavLink>
+        </HeaderElementsContainer>
+      </HeaderMobileContainer>
 
       <MenuMobileContainer>
-        <MenuElement>
-          <NavLink exact to="/" activeClassName="menuElementIsActive">
-            <Icon icon={IconHome} size={25} />
-          </NavLink>
-          <NavLink to="/about" activeClassName="menuElementIsActive">
-            <Icon icon={IconInfo} size={25} />
-          </NavLink>
-          <NavLink to="/join" activeClassName="menuElementIsActive">
-            <Icon icon={IconJoin} size={25} />
-          </NavLink>
-          <NavLink to="/people" activeClassName="menuElementIsActive">
-            <Icon icon={IconPeople} size={25} />
-          </NavLink>
-        </MenuElement>
+        <MenuElements sizeElements={25} />
       </MenuMobileContainer>
     </>
   );
