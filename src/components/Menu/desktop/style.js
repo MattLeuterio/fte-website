@@ -11,5 +11,28 @@ export const MenuDesktopContainer = styled.div`
   background: ${theme.colors.gradients.dark};
   border-radius: 0px 12px 12px 0px;
   box-shadow: ${theme.utility.boxShadowDown};
-  z-index: ${theme.zIndex.menus}
+  z-index: ${theme.zIndex.menus};
+`;
+
+export const ElementsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`;
+
+export const TopContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+`;
+export const MenuContainer = styled.div`
+  width: 100%;
+  flex-grow: 1;
+`;
+
+export const BottomContainer = styled.div`
+  width: 100%;
+  height: 20%;
 `;

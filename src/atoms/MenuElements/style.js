@@ -3,11 +3,16 @@ import theme from '../../ui/theme';
 
 
 export const MenuElementsContainer = styled.div`
-height: 100%;
+  height: 100%;
   padding: 0 20px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: ${props => props.isMobile ? 'row' : 'column'};
+  justify-content: ${props => props.isMobile ? 'space-around' : 'center'};
   align-items: center;
+
+  > a:not(:last-child) {
+    margin-bottom: ${props => props.isMobile ? '0' : '20px'};
+  }
 
   > a {
     width: 45px;

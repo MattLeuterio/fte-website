@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 
+import { withMediaQueries } from "../../hoc/withMediaQueries";
 import { MenuElementsContainer } from "./style";
 import {
   IconHome,
@@ -11,9 +12,9 @@ import {
 } from "../../ui/assets/icons";
 import Icon from "../Icon";
 
-const MenuElements = ({ sizeElements }) => {
+const MenuElements = ({ sizeElements, isMobile, mediaIsPhone }) => {
   return (
-    <MenuElementsContainer>
+    <MenuElementsContainer isMobile={mediaIsPhone ? true : false}>
       <NavLink exact to="/" activeClassName="menuElementIsActive">
         <Icon icon={IconHome} sizeElements={sizeElements} />
       </NavLink>
@@ -36,6 +37,7 @@ MenuElements.defaultProps = {
 
 MenuElements.propTypes = {
   sizeElements: PropTypes.number.isRequired,
+  isMobile: PropTypes.bool,
 };
 
-export default MenuElements;
+export default withMediaQueries(MenuElements);

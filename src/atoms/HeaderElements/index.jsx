@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 
+import { withMediaQueries } from "../../hoc/withMediaQueries";
 import { HeaderElementsContainer } from "./style";
 import {
   IconFTE,
@@ -12,15 +13,19 @@ import {
 } from "../../ui/assets/icons";
 import Icon from "../Icon";
 
-const HeaderElements = ({ sizeElements, sizeLogo }) => {
+const HeaderElements = ({ sizeElements, sizeLogo, isMobile, mediaIsPhone }) => {
   const lastResultsPath = "/last-results";
 
   return (
-    <HeaderElementsContainer>
+    <HeaderElementsContainer isMobile={mediaIsPhone ? true : false}>
       <Icon icon={IconNotify} size={sizeElements} />
-      <NavLink exact to="/" activeClassName="menuElementIsActive">
-        <Icon icon={IconFTE} size={sizeLogo} />
-      </NavLink>
+
+      {mediaIsPhone && (
+        <NavLink exact to="/" activeClassName="menuElementIsActive">
+          <Icon icon={IconFTE} size={sizeLogo} />
+        </NavLink>
+      )}
+
       <NavLink to="/last-results" activeClassName="menuElementIsActive">
         <Icon
           icon={
@@ -43,6 +48,7 @@ HeaderElements.defaultProps = {
 HeaderElements.propTypes = {
   sizeElements: PropTypes.number.isRequired,
   sizeLogo: PropTypes.number.isRequired,
+  isMobile: PropTypes.bool,
 };
 
-export default HeaderElements;
+export default withMediaQueries(HeaderElements);
