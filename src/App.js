@@ -11,20 +11,23 @@ import {
   LastResults,
   PageNotFound
 } from './pages'
+import { GlobalLayout } from './components';
 
 function App() {
   const location = useLocation();
 
   return (
       <AnimatePresence exitBeforeEnter>
-        <Switch location={location} key={location.key}>
-          <Route exact path="/last-results" component={LastResults} />
-          <Route exact path="/people" component={People} />
-          <Route exact path="/join" component={Join} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/" component={Home} />
-          <Route component={PageNotFound} />
-        </Switch> 
+        <GlobalLayout>
+          <Switch location={location} key={location.key}>
+            <Route exact path="/last-results" component={LastResults} />
+            <Route exact path="/people" component={People} />
+            <Route exact path="/join" component={Join} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/" component={Home} />
+            <Route component={PageNotFound} />
+          </Switch> 
+        </GlobalLayout>
       </AnimatePresence>
   );
 }

@@ -1,12 +1,18 @@
 import React from "react";
+
+import containerVariants from "../../ui/containerVariants";
 import { AboutContainer } from "./style";
-import { PageContainer } from "../../components";
 
 const about = () => {
   return (
-    <PageContainer>
-      <AboutContainer>About</AboutContainer>
-    </PageContainer>
+    <AboutContainer
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
+      About
+    </AboutContainer>
   );
 };
 

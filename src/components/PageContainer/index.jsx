@@ -3,8 +3,9 @@ import { Container } from "./style";
 
 import containerVariants from "../../ui/containerVariants";
 import { Menu } from "../../components";
+import { withMediaQueries } from "../../hoc/withMediaQueries";
 
-const pageContainer = ({ children }) => {
+const pageContainer = ({ children, mediaIsPhone, mediaIsTablet }) => {
   return (
     <Container
       variants={containerVariants}
@@ -13,9 +14,8 @@ const pageContainer = ({ children }) => {
       exit="exit"
     >
       {children}
-      <Menu />
     </Container>
   );
 };
 
-export default pageContainer;
+export default withMediaQueries(pageContainer);
