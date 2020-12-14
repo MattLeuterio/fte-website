@@ -38,6 +38,16 @@ const types = {
     fontSize: 14,
     lineHeight: 1.14
   },
+  slogan: {
+    fontSize: 36,
+    lineHeight: 1.30,
+    fontWeight: 600
+  },
+  pageSubtitleLarge: {
+    fontSize: 24,
+    lineHeight: 1.30,
+    color: `${theme.colors.primary.green}`
+  },
   label: {
     fontSize: 12,
     lineHeight: 1.17,
@@ -57,11 +67,11 @@ const types = {
 }  
 
 
-const Montserrat = ({
+const Inter = ({
   type, configuration, children, htmlAttribute, onClick
 }) => <Typeface htmlAttribute={htmlAttribute} configuration={{ ...baseConfig, ...types[type], ...configuration }} onClick={onClick}>{children}</Typeface>;
 
-Montserrat.propTypes = {
+Inter.propTypes = {
   htmlAttribute: PropTypes.string,
   children: PropTypes.node,
   type: PropTypes.oneOf(Object.keys(types)),
@@ -69,4 +79,4 @@ Montserrat.propTypes = {
   onClick: PropTypes.func
 };
 
-export default Montserrat;
+export default Inter;

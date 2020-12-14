@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { HeaderElements, Icon, MenuElements } from "../../../atoms";
 import {
   MenuDesktopContainer,
@@ -13,7 +14,9 @@ const MenuDesktop = () => (
   <MenuDesktopContainer>
     <ElementsContainer>
       <TopContainer>
-        <Icon icon={IconFTE} size={50} />
+        <NavLink exact to="/">
+          <Icon icon={IconFTE} size={50} />
+        </NavLink>
       </TopContainer>
       <MenuContainer>
         <MenuElements />

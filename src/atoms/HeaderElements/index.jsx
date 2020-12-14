@@ -17,7 +17,7 @@ const HeaderElements = ({ sizeElements, sizeLogo, isMobile, mediaIsPhone }) => {
   const lastResultsPath = "/last-results";
 
   return (
-    <HeaderElementsContainer isMobile={mediaIsPhone ? true : false}>
+    <HeaderElementsContainer isMobile={mediaIsPhone}>
       <Icon icon={IconNotify} size={sizeElements} />
 
       {mediaIsPhone && (

@@ -12,10 +12,4 @@ const Menu = ({ mediaIsPhone }) => {
   }
 };
 
-Menu.propTypes = {
-  // HOC (withMediaQueries)
-  // mediaIsPhone: MediaQueryInterface,
-  // mediaIsTablet: MediaQueryInterface
-};
-
 export default withMediaQueries(Menu);

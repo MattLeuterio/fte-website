@@ -9,7 +9,7 @@ export const PageContainer = styled.div`
   margin-top: ${HeaderMobileHeight}px;
 
   @media ${theme.device.tabletL} {
-    height: 100vh;
+    min-height: 100vh;
     width: calc(100% - ${NavBarWidth}px);
     margin-left: ${NavBarWidth}px;
     margin-top: 0;
@@ -21,9 +21,15 @@ export const Background = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-image: linear-gradient(163.19deg,rgb(62 181 133 / 84%) -235.67%,rgb(34 52 60) 64.21%), url(${bg});
+  height: 90%;
+  background-image: linear-gradient(163.19deg,rgb(62 181 133 / 24%) -155.67%,rgb(34 52 60) 54.21%),url(${bg});
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+  background-position-x: center;
+  background-position-y: ${HeaderMobileHeight}px;
+
+  @media ${theme.device.tabletL} {
+    background-position-y: top;  
+  }
 `;

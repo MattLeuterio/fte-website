@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import { Menu } from "../index";
 import { PageContainer, Background } from "./style";
@@ -14,7 +13,5 @@ const globalLayout = ({ children }) => {
     </>
   );
 };
-
-globalLayout.propTypes = {};
 
 export default withMediaQueries(globalLayout);
