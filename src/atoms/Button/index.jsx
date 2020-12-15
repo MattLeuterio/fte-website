@@ -15,12 +15,12 @@ const Button = ({ sizeIcon, icon, onClick, color, text }) => {
 Button.defaultProps = {
   color: "#fff",
   text: "Text",
-  sizeIcon: "16",
+  sizeIcon: 16,
 };
 
 Button.propTypes = {
-  icon: PropTypes.string.isRequired,
-  sizeIcon: PropTypes.number.isRequired,
+  icon: PropTypes.string,
+  sizeIcon: PropTypes.number,
   onClick: PropTypes.func,
   rotate: PropTypes.number,
 };

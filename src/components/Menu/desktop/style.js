@@ -3,7 +3,7 @@ import theme from '../../../ui/theme';
 import { NavBarWidth } from '../../../const';
 
 export const MenuDesktopContainer = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: ${NavBarWidth}px;

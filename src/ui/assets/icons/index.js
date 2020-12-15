@@ -17,8 +17,13 @@ import IconPeople from "./nav/icon-people.png";
 
 // Socials
 import IconDiscord from "./socials/icon-discord.png";
+import IconDiscordG from "./socials/icon-discord-G.png";
 import IconInstagram from "./socials/icon-instagram.png";
+import IconInstagramG from "./socials/icon-instagram-G.png";
 import IconTwitter from "./socials/icon-twitter.png";
+import IconTwitterG from "./socials/icon-twitter-G.png";
+import IconSpotify from "./socials/icon-spotify.png";
+import IconSpotifyG from "./socials/icon-spotify-G.png";
 
 export {
   IconFTE,
@@ -36,5 +41,10 @@ export {
   IconPeople,
   IconDiscord,
   IconInstagram,
-  IconTwitter
+  IconTwitter,
+  IconSpotify,
+  IconDiscordG,
+  IconInstagramG,
+  IconTwitterG,
+  IconSpotifyG,
 };

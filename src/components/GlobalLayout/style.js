@@ -17,12 +17,12 @@ export const PageContainer = styled.div`
 `;
 
 export const Background = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 90%;
-  background-image: linear-gradient(163.19deg,rgb(62 181 133 / 24%) -155.67%,rgb(34 52 60) 54.21%),url(${bg});
+  background-image: linear-gradient(163.19deg,rgb(7 255 155 / 71%) -155.67%,rgb(34 52 60) 54.21%),url(${bg});
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;

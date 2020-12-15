@@ -27,21 +27,29 @@ const types = {
   },
   h1: {
     fontSize: 21,
-    fontWeight: 500
+    fontWeight: 400
   },
   h2: {
     color: theme.colors.primary.lightblack,
     fontSize: 18,
-    fontWeight: 500
+    fontWeight: 400
   },
   h3: {
     fontSize: 14,
     lineHeight: 1.14
   },
+  pageTitle: {
+    fontSize: 42,
+    fontWeight: 700
+  },
+  pageTitleSub: {
+    fontSize: 16,
+    color: `${theme.colors.primary.green}`
+  },
   slogan: {
     fontSize: 36,
     lineHeight: 1.30,
-    fontWeight: 600
+    fontWeight: 700
   },
   pageSubtitleLarge: {
     fontSize: 24,
@@ -56,7 +64,7 @@ const types = {
   label1: {
     fontSize: 12,
     letterSpacing: '0.5px',
-    fontWeight: 500,
+    fontWeight: 400,
     color: theme.colors.primary.gray
   },
   boldLabel: {

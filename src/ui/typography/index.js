@@ -7,7 +7,7 @@ export const TypefaceInterface = PropTypes.shape({
   color: PropTypes.string,
   fontFamily: PropTypes.string,
   fontStyle: PropTypes.oneOf(["normal", "italic"]),
-  fontWeight: PropTypes.oneOf([300, 500, 700]),
+  fontWeight: PropTypes.oneOf([300, 400, 700]),
   fontStretch: PropTypes.oneOf(["normal", "condensed"]),
   lineHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   letterSpacing: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
