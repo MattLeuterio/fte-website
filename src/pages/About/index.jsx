@@ -13,7 +13,7 @@ import {
   AboutContainer,
   Content,
   Story,
-  InstagramContainer,
+  // InstagramContainer,
   CallToActions,
   Discord,
 } from "./style";

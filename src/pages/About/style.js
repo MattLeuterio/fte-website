@@ -17,6 +17,7 @@ export const Content = styled.div`
 
   @media ${theme.device.tabletL} {
     margin-top: 50px;
+    width: 70%;
   }
 `;
 
@@ -24,7 +25,7 @@ export const Story = styled.p`
   width: 100%;
   
   @media ${theme.device.tabletL} {
-    width: 70%;
+    width: 85%;
     margin: 50px 0 20px;
   }
 `;
@@ -35,13 +36,14 @@ export const InstagramContainer = styled.div`
 `;
 
 export const CallToActions = styled.div`
-  margin-top: 30px;
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
   @media ${theme.device.tabletL} {
     flex-direction: row-reverse;
+    justify-content: flex-end;
   }
 `;
 
@@ -52,6 +54,7 @@ export const Discord = styled.div`
   
   @media ${theme.device.tabletL} {
     margin-top: 0;
+    margin-right: 20px;
     width: 300px;
 
   }

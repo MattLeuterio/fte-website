@@ -4,17 +4,16 @@ import { ToggleCTN, Content, HeaderToggle, Title } from "./style";
 import Icon from "../Icon";
 import { IconArrowCarousel } from "../../ui/assets/icons";
 
-const ToggleSection = ({ size, icon, text, children, rotate }) => {
+const ToggleSection = ({ size, icon, text, children, rotate, open }) => {
   const [toggle, setToggle] = useState(false);
-  const [rotateToggle, setRotateToggle] = useState(false);
 
   const toogleHandler = () => {
-    setRotateToggle(!rotateToggle);
     setToggle(!toggle);
   };
 
   return (
     <ToggleCTN
+      open={toggle}
       onClick={() => toogleHandler()}
       rotateToogle={toggle}
       rotate={rotate}

@@ -72,9 +72,20 @@ const types = {
     fontWeight: 700,
     lineHeight: 1.14
   },
-  linkButton: {
+  regularBold: {
     fontSize: 16,
     fontWeight: 700
+  },
+  labelUppercase: {
+    fontSize: 10,
+    fontWeight: 700,
+    textTransform: 'uppercase'
+  },
+  gameUppercase: {
+    fontSize: 12,
+    fontWeight: 700,
+    textTransform: 'uppercase',
+    color: theme.colors.primary.green
   }
 }  
 

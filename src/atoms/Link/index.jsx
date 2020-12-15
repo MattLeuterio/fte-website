@@ -10,7 +10,7 @@ const Link = ({ url, icon, size, text, padding }) => {
     <>
       <LinkA href={url} target="_blank" padding={padding}>
         {icon && <Icon icon={icon} size={size} />}
-        {text && <Inter type="linkButton">{text}</Inter>}
+        {text && <Inter type="regularBold">{text}</Inter>}
       </LinkA>
     </>
   );
