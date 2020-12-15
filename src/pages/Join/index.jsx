@@ -16,6 +16,7 @@ import { Icon, PageTitle, ToggleSection } from "../../atoms";
 import { IconLookingPerson } from "../../ui/assets/icons";
 import Inter from "../../ui/typography/inter";
 import { withMediaQueries } from "../../hoc/withMediaQueries";
+import { FormApply } from "../../components";
 
 const contentful = require("contentful");
 
@@ -72,7 +73,9 @@ const Join = ({ medisIsPhone }) => {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. In officia
             delectus sed dolorem qui officiis vitae eum modi facilis similique.
           </FormDescription>
-          <Form></Form>
+          <Form>
+            <FormApply />
+          </Form>
         </FormContainer>
       </Content>
     </JoinContainer>

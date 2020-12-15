@@ -101,8 +101,7 @@ export const FormContainer = styled.div`
 export const FormDescription = styled.p`
   margin-bottom: 20px;
 `;
-export const Form = styled.p`
+export const Form = styled.div`
   width: 100%;
   height: 500px;
-  background-color: white;
 `;
