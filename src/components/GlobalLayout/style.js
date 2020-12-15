@@ -27,7 +27,7 @@ export const Background = styled.div`
   background-size: cover;
   z-index: -1;
   background-position-x: center;
-  background-position-y: ${HeaderMobileHeight}px;
+  background-position-y: calc(${HeaderMobileHeight}px - 10px);
 
   @media ${theme.device.tabletL} {
     background-position-y: top;  

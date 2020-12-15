@@ -1,5 +1,5 @@
 import React from "react";
-import { PageTitle, Link } from "../../atoms";
+import { PageTitle, Link, ToggleSection } from "../../atoms";
 import { withMediaQueries } from "../../hoc/withMediaQueries";
 import {
   IconInstagramG,
@@ -15,9 +15,10 @@ import {
   Story,
   InstagramContainer,
   CallToActions,
+  Discord,
 } from "./style";
 
-const about = ({ mediaIsPhone }) => {
+const about = ({ mediaIsPhone, isMobile }) => {
   return (
     <AboutContainer
       variants={containerVariants}
@@ -37,27 +38,42 @@ const about = ({ mediaIsPhone }) => {
           minus molestiae velit quos sunt magni ex nostrum nobis vero ab. Itaque
           saepe aliquam, exercitationem deleniti, nobis dolores velit.
         </Story>
-        {!mediaIsPhone && <InstagramContainer></InstagramContainer>}
+        {/* {!mediaIsPhone && <InstagramContainer></InstagramContainer>} */}
         <CallToActions>
-          <Link
-            url="https://www.instagram.com/flatearthesports/"
-            padding="5px"
-            size={28}
-            icon={IconInstagramG}
-          />
+          {mediaIsPhone && (
+            <Link
+              url="https://www.instagram.com/flatearthesports/"
+              padding="7px"
+              size={28}
+              icon={IconInstagramG}
+            />
+          )}
           <Link
             url="https://open.spotify.com/playlist/51QVxg4b9GP2bUKhcEubM3"
             text="FTE Selection"
-            padding="5px 10px"
+            padding="10px 20px"
             size={28}
             icon={IconSpotifyG}
           />
-          <Link
-            url="https://twitter.com/EsportsFlat"
-            padding="5px"
-            size={28}
-            icon={IconTwitterG}
-          />
+          {mediaIsPhone && (
+            <Link
+              url="https://twitter.com/EsportsFlat"
+              padding="7px"
+              size={28}
+              icon={IconTwitterG}
+            />
+          )}
+          <Discord>
+            <ToggleSection
+              icon={IconDiscordG}
+              text="Server Discord"
+              rotate={58}
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus error illo obcaecati.
+              <Link url="https://discord.gg/qPengpCjtu" text="Join" />
+            </ToggleSection>
+          </Discord>
         </CallToActions>
       </Content>
     </AboutContainer>

@@ -71,6 +71,10 @@ const types = {
     fontSize: 14,
     fontWeight: 700,
     lineHeight: 1.14
+  },
+  linkButton: {
+    fontSize: 16,
+    fontWeight: 700
   }
 }  
 
