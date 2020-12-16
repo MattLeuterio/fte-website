@@ -33,9 +33,8 @@ const Join = ({ medisIsPhone }) => {
       const res = response.items;
       setList(res);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  console.log(list);
 
   return (
     <JoinContainer>
@@ -58,7 +57,7 @@ const Join = ({ medisIsPhone }) => {
                   <Inter type="gameUppercase">{item.fields.platform}</Inter>
                 </CardPrimaryInfo>
               </CardBody>
-              <ToggleSection text="REQUIREMENTS" rotate={58}>
+              <ToggleSection text="REQUIREMENTS">
                 <ul>
                   {item.fields.requirements?.map((req, index) => (
                     <li key={index}>{req}</li>
@@ -74,7 +73,9 @@ const Join = ({ medisIsPhone }) => {
             delectus sed dolorem qui officiis vitae eum modi facilis similique.
           </FormDescription>
           <Form>
-            <FormApply />
+            <ToggleSection text="Apply">
+              <FormApply />
+            </ToggleSection>
           </Form>
         </FormContainer>
       </Content>

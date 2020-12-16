@@ -25,6 +25,15 @@ import IconTwitterG from "./socials/icon-twitter-G.png";
 import IconSpotify from "./socials/icon-spotify.png";
 import IconSpotifyG from "./socials/icon-spotify-G.png";
 
+// Form
+import IconFormCalendar from "./form/icon-form-calendar.png";
+import IconFormEmail from "./form/icon-form-email.png";
+import IconFormExperience from "./form/icon-form-experience.png";
+import IconFormFullname from "./form/icon-form-fullname.png";
+import IconFormPhone from "./form/icon-form-phone.png";
+import IconFormRole from "./form/icon-form-role.png";
+import IconFormUbisoft from "./form/icon-form-ubisoft.png";
+
 export {
   IconFTE,
   IconArrowCarousel,
@@ -47,4 +56,11 @@ export {
   IconInstagramG,
   IconTwitterG,
   IconSpotifyG,
+  IconFormUbisoft,
+  IconFormEmail,
+  IconFormExperience,
+  IconFormFullname,
+  IconFormPhone,
+  IconFormRole,
+  IconFormCalendar
 };

@@ -33,7 +33,9 @@ const ToggleSection = ({ size, icon, text, children, rotate, open }) => {
           <Icon icon={IconArrowCarousel} size={13} />
         </div>
       </HeaderToggle>
-      {toggle && <Content>{children}</Content>}
+      {toggle && (
+        <Content onClick={(e) => e.stopPropagation(e)}>{children}</Content>
+      )}
     </ToggleCTN>
   );
 };

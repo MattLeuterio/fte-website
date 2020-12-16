@@ -64,11 +64,7 @@ const about = ({ mediaIsPhone, isMobile }) => {
             />
           )}
           <Discord>
-            <ToggleSection
-              icon={IconDiscordG}
-              text="Server Discord"
-              rotate={58}
-            >
+            <ToggleSection icon={IconDiscordG} text="Server Discord">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Temporibus error illo obcaecati.
               <Link url="https://discord.gg/qPengpCjtu" text="Join" />
