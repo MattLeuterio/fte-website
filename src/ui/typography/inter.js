@@ -86,6 +86,15 @@ const types = {
     fontWeight: 700,
     textTransform: 'uppercase',
     color: theme.colors.primary.green
+  },
+  emailSuccessHead: {
+    fontSize: 16,
+    fontWeight: 700,
+    color: theme.colors.primary.green
+  },
+  emailSuccessBody: {
+    fontSize: 14,
+    fontWeight: 400
   }
 }  
 

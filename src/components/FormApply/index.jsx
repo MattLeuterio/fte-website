@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
-import { Form, Input, Textarea, Label, InputCtn } from "./style";
+import { Form, Input, Textarea, Label, InputCtn, Success } from "./style";
 import { withMediaQueries } from "../../hoc/withMediaQueries";
 import Inter from "../../ui/typography/inter";
 import { Icon } from "../../atoms";
@@ -16,7 +16,16 @@ import {
   IconDiscord,
 } from "../../ui/assets/icons";
 
+const emailSuccessTemplate = () => (
+  <>
+    <Inter type="emailSuccessHead">Success!</Inter>
+    <Inter type="emailSuccessBody">Request sent successfully.</Inter>
+  </>
+);
+
 const FormApply = () => {
+  const [emailSuccess, setEmailSuccess] = useState(emailSuccessTemplate());
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -29,7 +38,7 @@ const FormApply = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setEmailSuccess("Success! Request sent successfully");
         },
         (error) => {
           console.log(error.text);
@@ -50,19 +59,24 @@ const FormApply = () => {
         <Label>
           <Icon icon={IconFormFullname} size={24} />
         </Label>
-        <Input placeholder="Nickname" type="text" name="nickname" />
+        <Input placeholder="Nickname" type="text" name="nickname" required />
       </InputCtn>
       <InputCtn>
         <Label>
           <Icon icon={IconFormCalendar} size={24} />
         </Label>
-        <Input placeholder="Age" type="number" name="age" />
+        <Input placeholder="Age" type="number" name="age" required />
       </InputCtn>
       <InputCtn>
         <Label>
           <Icon icon={IconFormPhone} size={24} />
         </Label>
-        <Input placeholder="Mobile number" type="number" name="phone" />
+        <Input
+          placeholder="Mobile number"
+          type="tel"
+          name="phone"
+          pattern="[0-9]{10}"
+        />
       </InputCtn>
       <InputCtn>
         <Label>
@@ -72,6 +86,7 @@ const FormApply = () => {
           placeholder="Discord ID (es. Name#0000)"
           type="text"
           name="discord"
+          pattern="[(.*)#(\d{4})]"
         />
       </InputCtn>
       <InputCtn>
@@ -92,8 +107,9 @@ const FormApply = () => {
         </Label>
         <Inter type="h3">Experience</Inter>
       </InputCtn>
-      <Textarea rows="10" name="experience" />
+      <Textarea rows="7" name="experience" />
       <Input type="submit" value="Complete" />
+      <Success>{emailSuccess}</Success>
     </Form>
   );
 };

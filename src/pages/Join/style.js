@@ -94,8 +94,9 @@ export const CardPrimaryInfo = styled.div`
 `;
 
 export const FormContainer = styled.div`
-  width: 300px;
-  height: 500px;
+  @media ${theme.device.tabletL} {
+    width: 30%;
+  }
 `;
 
 export const FormDescription = styled.p`
@@ -103,5 +104,4 @@ export const FormDescription = styled.p`
 `;
 export const Form = styled.div`
   width: 100%;
-  height: 500px;
 `;

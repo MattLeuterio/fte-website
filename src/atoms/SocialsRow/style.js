@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import theme from '../../ui/theme';
 
 export const SocialsRowContainer = styled.div`
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 150px;
   display: flex;

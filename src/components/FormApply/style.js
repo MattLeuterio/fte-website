@@ -69,3 +69,11 @@ export const Label = styled.label`
     transform: translate(-50%, -50%);
   }
 `;
+
+export const Success = styled.div`
+  margin-top: 30px;
+
+  > div:first-child {
+    margin-bottom: 5px;
+  }
+`;

@@ -39,5 +39,5 @@ export const Title = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: 20px 10px 50px;
+  padding: 20px 10px 40px;
 `;
