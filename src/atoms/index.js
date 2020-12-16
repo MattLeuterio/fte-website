@@ -6,6 +6,7 @@ import PageTitle from './PageTitle';
 import SocialsRow from './SocialsRow';
 import Link from './Link';
 import ToggleSection from './ToggleSection';
+import NoResult from './NoResult';
 
 export {
   Icon,
@@ -15,5 +16,6 @@ export {
   PageTitle,
   SocialsRow,
   Link,
-  ToggleSection
+  ToggleSection,
+  NoResult
 };

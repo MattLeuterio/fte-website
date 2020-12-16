@@ -12,7 +12,7 @@ import {
   FormDescription,
   Form,
 } from "./style";
-import { Icon, PageTitle, ToggleSection } from "../../atoms";
+import { Icon, NoResult, PageTitle, ToggleSection } from "../../atoms";
 import { IconLookingPerson } from "../../ui/assets/icons";
 import Inter from "../../ui/typography/inter";
 import { withMediaQueries } from "../../hoc/withMediaQueries";
@@ -31,7 +31,7 @@ const Join = ({ medisIsPhone }) => {
   useEffect(() => {
     client.getEntries({ content_type: "lookingFor" }).then((response) => {
       const res = response.items;
-      setList(res);
+      setList([]);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -41,31 +41,35 @@ const Join = ({ medisIsPhone }) => {
       <PageTitle text="Join" />
       <Content>
         <LookingFor>
-          {list.map((item, index) => (
-            <CardLookingFor key={index}>
-              <CardHeader>
-                <Icon icon={IconLookingPerson} size={30} />
-                <Inter type="regularBold">{item.fields.role}</Inter>
-              </CardHeader>
-              <CardBody>
-                <CardPrimaryInfo>
-                  <Inter type="labelUppercase">Game</Inter>
-                  <Inter type="gameUppercase">{item.fields.game}</Inter>
-                </CardPrimaryInfo>
-                <CardPrimaryInfo>
-                  <Inter type="labelUppercase">Platform</Inter>
-                  <Inter type="gameUppercase">{item.fields.platform}</Inter>
-                </CardPrimaryInfo>
-              </CardBody>
-              <ToggleSection text="REQUIREMENTS">
-                <ul>
-                  {item.fields.requirements?.map((req, index) => (
-                    <li key={index}>{req}</li>
-                  ))}
-                </ul>
-              </ToggleSection>
-            </CardLookingFor>
-          ))}
+          {list.length > 0 ? (
+            list.map((item, index) => (
+              <CardLookingFor key={index}>
+                <CardHeader>
+                  <Icon icon={IconLookingPerson} size={30} />
+                  <Inter type="regularBold">{item.fields.role}</Inter>
+                </CardHeader>
+                <CardBody>
+                  <CardPrimaryInfo>
+                    <Inter type="labelUppercase">Game</Inter>
+                    <Inter type="gameUppercase">{item.fields.game}</Inter>
+                  </CardPrimaryInfo>
+                  <CardPrimaryInfo>
+                    <Inter type="labelUppercase">Platform</Inter>
+                    <Inter type="gameUppercase">{item.fields.platform}</Inter>
+                  </CardPrimaryInfo>
+                </CardBody>
+                <ToggleSection text="REQUIREMENTS">
+                  <ul>
+                    {item.fields.requirements?.map((req, index) => (
+                      <li key={index}>{req}</li>
+                    ))}
+                  </ul>
+                </ToggleSection>
+              </CardLookingFor>
+            ))
+          ) : (
+            <NoResult text="Non siamo alla ricerca di persone, ma se vuoi proporti compila il form." />
+          )}
         </LookingFor>
         <FormContainer>
           <FormDescription>

@@ -24,7 +24,7 @@ const emailSuccessTemplate = () => (
 );
 
 const FormApply = () => {
-  const [emailSuccess, setEmailSuccess] = useState(emailSuccessTemplate());
+  const [emailSuccess, setEmailSuccess] = useState();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -38,7 +38,7 @@ const FormApply = () => {
       )
       .then(
         (result) => {
-          setEmailSuccess("Success! Request sent successfully");
+          setEmailSuccess(emailSuccessTemplate());
         },
         (error) => {
           console.log(error.text);
@@ -99,7 +99,7 @@ const FormApply = () => {
         <Label>
           <Icon icon={IconFormRole} size={24} />
         </Label>
-        <Input placeholder="Role (apply)" type="text" name="role" />
+        <Input placeholder="Role (apply)" type="text" name="role" required />
       </InputCtn>
       <InputCtn>
         <Label>
