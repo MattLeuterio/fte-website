@@ -15,12 +15,20 @@ export const MenuElementsContainer = styled.div`
   }
 
   > a {
+    position: relative;
     width: 45px;
     border-radius: 50%;
     height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    > div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
     
     &.menuElementIsActive {
       background: ${theme.colors.primary.green};

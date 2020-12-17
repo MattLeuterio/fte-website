@@ -20,7 +20,7 @@ import { FormApply } from "../../components";
 
 const contentful = require("contentful");
 
-const Join = ({ medisIsPhone }) => {
+const Join = () => {
   const [list, setList] = useState([]);
 
   const client = contentful.createClient({
@@ -31,7 +31,7 @@ const Join = ({ medisIsPhone }) => {
   useEffect(() => {
     client.getEntries({ content_type: "lookingFor" }).then((response) => {
       const res = response.items;
-      setList([]);
+      setList(res);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

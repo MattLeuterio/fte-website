@@ -41,7 +41,6 @@ export const Input = styled.input`
       background: ${theme.colors.gradients.primary};
     }
   }
-  
 `;
 
 export const Textarea = styled.textarea`
@@ -52,6 +51,14 @@ export const Textarea = styled.textarea`
   border-bottom: 2px solid ${theme.colors.primary.lightGray};
   padding: 8px 5px;
   color: ${theme.colors.primary.lightGray};
+  font-size: 14px;
+  color: white;
+  font-family: inherit;
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid ${theme.colors.primary.green};
+  }
 `;
 
 export const Label = styled.label`

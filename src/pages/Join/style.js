@@ -37,7 +37,7 @@ export const LookingFor = styled.div`
   } 
 `;
 export const CardLookingFor = styled.div`
-  width: 310px;
+  width: calc(100% / 2 - 15px);
   min-width: 270px;
   background: ${theme.colors.gradients.dark};
   padding: 30px 25px;
@@ -104,4 +104,5 @@ export const FormDescription = styled.p`
 `;
 export const Form = styled.div`
   width: 100%;
+  max-width: 330px;
 `;

@@ -59,7 +59,8 @@ const types = {
   label: {
     fontSize: 12,
     lineHeight: 1.17,
-    letterSpacing: 'normal'
+    letterSpacing: 'normal',
+    textTransform: 'capitalize'
   },
   label1: {
     fontSize: 12,
@@ -86,6 +87,22 @@ const types = {
     fontWeight: 700,
     textTransform: 'uppercase',
     color: theme.colors.primary.green
+  },
+  resultGame: {
+    fontSize: 10,
+    fontWeight: 700,
+    textTransform: 'uppercase',
+    color: theme.colors.primary.green
+  },
+  resultText: {
+    fontSize: 10,
+    fontWeight: 700,
+    textTransform: 'uppercase',
+    color: theme.colors.primary.lightGray
+  },
+  resultNumbers: {
+    fontSize: 16,
+    fontWeight: 400,
   },
   emailSuccessHead: {
     fontSize: 16,
