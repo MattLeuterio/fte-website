@@ -112,6 +112,21 @@ const types = {
   emailSuccessBody: {
     fontSize: 14,
     fontWeight: 400
+  },
+  menuPeopleTitle: {
+    fontSize: 12,
+    textTransform: 'capitalize',
+    textAlign: 'center'
+  },
+  peopleSectionTitle: {
+    fontSize: 28,
+    fontWeight: 700,
+    textTransform: 'capitalize'
+  },
+  peopleGameTitle : {
+    fontSize: 18,
+    fontWeight: 700,
+    textTransform: 'capitalize'
   }
 }  
 

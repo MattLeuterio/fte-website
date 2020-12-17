@@ -8,6 +8,10 @@ import IconResult from "./icon-result.png";
 import IconResultActive from "./icon-result-active.png";
 import IconStats from "./icon-stats.png";
 import IconStatsActive from "./icon-tw.png";
+import IconAdmins from "./icon-admins.png";
+import IconTeams from "./icon-teams.png";
+import IconStreamers from "./icon-streamers.png";
+import IconTwitch from "./icon-twitch.png";
 
 // Nav
 import IconHome from "./nav/icon-home.png";
@@ -62,5 +66,9 @@ export {
   IconFormFullname,
   IconFormPhone,
   IconFormRole,
-  IconFormCalendar
+  IconFormCalendar,
+  IconAdmins,
+  IconTeams,
+  IconStreamers,
+  IconTwitch
 };

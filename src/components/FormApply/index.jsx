@@ -59,13 +59,13 @@ const FormApply = () => {
         <Label>
           <Icon icon={IconFormFullname} size={24} />
         </Label>
-        <Input placeholder="Nickname" type="text" name="nickname" required />
+        <Input placeholder="Nickname*" type="text" name="nickname" required />
       </InputCtn>
       <InputCtn>
         <Label>
           <Icon icon={IconFormCalendar} size={24} />
         </Label>
-        <Input placeholder="Age" type="number" name="age" required />
+        <Input placeholder="Age*" type="number" name="age" required />
       </InputCtn>
       <InputCtn>
         <Label>
@@ -99,7 +99,7 @@ const FormApply = () => {
         <Label>
           <Icon icon={IconFormRole} size={24} />
         </Label>
-        <Input placeholder="Role (apply)" type="text" name="role" required />
+        <Input placeholder="Role (apply)*" type="text" name="role" required />
       </InputCtn>
       <InputCtn>
         <Label>
