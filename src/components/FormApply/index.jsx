@@ -86,7 +86,7 @@ const FormApply = () => {
           placeholder="Discord ID (es. Name#0000)"
           type="text"
           name="discord"
-          pattern="[(.*)#(\d{4})]"
+          //pattern="[(.*)#(\d{4})]"
         />
       </InputCtn>
       <InputCtn>
