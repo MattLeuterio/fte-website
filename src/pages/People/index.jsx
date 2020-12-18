@@ -10,19 +10,14 @@ import {
   Game,
   GameTitle,
   GamePlayers,
-  CardPlayer,
   Nickname,
   StatsIcon,
 } from "./style";
-import { Icon, PageTitle, IconStatistics } from "../../atoms";
+import { Icon, PageTitle, CardPlayer } from "../../atoms";
 import {
   IconAdmins,
   IconTeams,
-  IconStreamers,
-  IconStats,
-  IconStatsActive,
-  IconInstagram,
-  IconTwitch,
+  IconStreamers
 } from "../../ui/assets/icons";
 import Inter from "../../ui/typography/inter";
 import { withMediaQueries } from "../../hoc/withMediaQueries";
@@ -34,7 +29,6 @@ const Join = ({}) => {
   const [listAdmins, setListAdmins] = useState([]);
   const [listStreamers, setListStreamers] = useState([]);
   const [menuActive, setMenuActive] = useState("teams");
-  const [stats, setStats] = useState(false);
   let gamesList = [];
 
   const client = contentful.createClient({
@@ -113,7 +107,19 @@ const Join = ({}) => {
       </TitleSection>
       <Content>
         {/* ADMINS */}
-        {menuActive === "admins" && <>Admins</>}
+        {menuActive === "admins" && (
+          listAdmins.map((admin, index) => (
+            <CardPlayer
+              srcIG={admin.fields.urlInstagram}
+              srcTwitch={admin.fields.urlTwitch}
+              cardType={menuActive}
+              key={index}
+              photo={admin.fields.photo.fields.file.url}
+              nickname={admin.fields.nickname}
+              role={admin.fields.role}
+            />
+          ))
+        )}
         {/* TEAMS */}
         {menuActive === "teams" &&
           gamesList?.map((game, index) => (
@@ -126,21 +132,32 @@ const Join = ({}) => {
                   (player, index) =>
                     game === player.fields.game && (
                       <CardPlayer
+                        srcIG={player.fields.urlInstagram}
+                        srcTW={player.fields.urlStatistics}
+                        cardType={menuActive}
                         key={index}
                         photo={player.fields.photo.fields.file.url}
-                      >
-                        <Nickname>{player.fields.nickname}</Nickname>
-                        <StatsIcon>
-                          <IconStatistics />
-                        </StatsIcon>
-                      </CardPlayer>
+                        nickname={player.fields.nickname}
+                      />
                     )
                 )}
               </GamePlayers>
             </Game>
           ))}
         {/* STREAMERS */}
-        {menuActive === "streamers" && <>Streamers</>}
+        {menuActive === "streamers" && (
+          listStreamers.map((streamer, index) => (
+            <CardPlayer
+              srcIG={streamer.fields.urlInstagram}
+              srcTwitch={streamer.fields.urlTwitch}
+              cardType={menuActive}
+              key={index}
+              photo={streamer.fields.photo.fields.file.url}
+              nickname={streamer.fields.nickname}
+              role="Streamer"
+            />
+          ))
+        )}
       </Content>
     </JoinContainer>
   );

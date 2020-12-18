@@ -9,7 +9,7 @@ export const LinkA = styled.a`
   color: ${theme.colors.primary.white};
   justify-content: flex-end;
   align-items: center;
-  background: ${theme.colors.gradients.dark};
+  background: ${props => props.background ? `${theme.colors.gradients.dark}` : 'transparent'}; 
   border-radius: 12px;
   box-shadow: ${theme.utility.boxShadowDown};
   

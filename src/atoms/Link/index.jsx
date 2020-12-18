@@ -8,7 +8,7 @@ import Inter from "../../ui/typography/inter";
 const Link = ({ url, icon, size, text, padding }) => {
   return (
     <>
-      <LinkA href={url} target="_blank" padding={padding}>
+      <LinkA href={url} target="_blank" padding={padding} background>
         {icon && <Icon icon={icon} size={size} />}
         {text && <Inter type="regularBold">{text}</Inter>}
       </LinkA>
@@ -18,6 +18,7 @@ const Link = ({ url, icon, size, text, padding }) => {
 
 Link.defaultProps = {
   padding: "10px 20px",
+  background: true,
 };
 
 Link.propTypes = {
@@ -25,6 +26,7 @@ Link.propTypes = {
   icon: PropTypes.string,
   size: PropTypes.number,
   padding: PropTypes.string,
+  background: PropTypes.bool,
 };
 
 export default Link;

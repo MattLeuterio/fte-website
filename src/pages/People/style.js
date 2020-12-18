@@ -63,17 +63,18 @@ export const TitleSection = styled.div`
 `;
 
 export const Game = styled.div`
-
   &:not(:last-child) {
     margin-bottom: 20px;
   }
 `;
-export const GameTitle = styled.div``;
+export const GameTitle = styled.div`
+  margin-bottom: 15px;
+`;
 export const GamePlayers = styled.div``;
 export const CardPlayer = styled.div`
   width: 220px;
   height: 300px;
-  background-image: ${props => `url(${props.photo})`};
+  background: ${props => `url(${props.photo})`};
   background-color: red;
   background-size: 120%;
   background-repeat: no-repeat;

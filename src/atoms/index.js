@@ -7,7 +7,7 @@ import SocialsRow from './SocialsRow';
 import Link from './Link';
 import ToggleSection from './ToggleSection';
 import NoResult from './NoResult';
-import IconStatistics from './IconStatistics';
+import CardPlayer from './CardPlayer';
 
 export {
   Icon,
@@ -19,5 +19,5 @@ export {
   Link,
   ToggleSection,
   NoResult,
-  IconStatistics
+  CardPlayer
 };
