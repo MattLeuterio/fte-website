@@ -7,11 +7,12 @@ import IconNotifyActive from "./icon-notify-active.png";
 import IconResult from "./icon-result.png";
 import IconResultActive from "./icon-result-active.png";
 import IconStats from "./icon-stats.png";
-import IconStatsActive from "./icon-tw.png";
+import IconStatsActive from "./icon-stats-active.png";
 import IconAdmins from "./icon-admins.png";
 import IconTeams from "./icon-teams.png";
 import IconStreamers from "./icon-streamers.png";
 import IconTwitch from "./icon-twitch.png";
+import IconTW from "./icon-tw.png";
 
 // Nav
 import IconHome from "./nav/icon-home.png";
@@ -70,5 +71,6 @@ export {
   IconAdmins,
   IconTeams,
   IconStreamers,
-  IconTwitch
+  IconTwitch,
+  IconTW
 };

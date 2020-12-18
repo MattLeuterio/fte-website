@@ -11,8 +11,10 @@ import {
   GameTitle,
   GamePlayers,
   CardPlayer,
+  Nickname,
+  StatsIcon,
 } from "./style";
-import { Icon, PageTitle } from "../../atoms";
+import { Icon, PageTitle, IconStatistics } from "../../atoms";
 import {
   IconAdmins,
   IconTeams,
@@ -24,15 +26,15 @@ import {
 } from "../../ui/assets/icons";
 import Inter from "../../ui/typography/inter";
 import { withMediaQueries } from "../../hoc/withMediaQueries";
-import { FormApply } from "../../components";
 
 const contentful = require("contentful");
 
-const Join = () => {
+const Join = ({}) => {
   const [listPlayers, setListPlayers] = useState([]);
   const [listAdmins, setListAdmins] = useState([]);
   const [listStreamers, setListStreamers] = useState([]);
   const [menuActive, setMenuActive] = useState("teams");
+  const [stats, setStats] = useState(false);
   let gamesList = [];
 
   const client = contentful.createClient({
@@ -123,8 +125,14 @@ const Join = () => {
                 {listPlayers.map(
                   (player, index) =>
                     game === player.fields.game && (
-                      <CardPlayer key={index}>
-                        {player.fields.nickname}
+                      <CardPlayer
+                        key={index}
+                        photo={player.fields.photo.fields.file.url}
+                      >
+                        <Nickname>{player.fields.nickname}</Nickname>
+                        <StatsIcon>
+                          <IconStatistics />
+                        </StatsIcon>
                       </CardPlayer>
                     )
                 )}

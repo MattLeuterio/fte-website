@@ -7,6 +7,7 @@ import SocialsRow from './SocialsRow';
 import Link from './Link';
 import ToggleSection from './ToggleSection';
 import NoResult from './NoResult';
+import IconStatistics from './IconStatistics';
 
 export {
   Icon,
@@ -17,5 +18,6 @@ export {
   SocialsRow,
   Link,
   ToggleSection,
-  NoResult
+  NoResult,
+  IconStatistics
 };

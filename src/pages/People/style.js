@@ -70,4 +70,27 @@ export const Game = styled.div`
 `;
 export const GameTitle = styled.div``;
 export const GamePlayers = styled.div``;
-export const CardPlayer = styled.div``;
+export const CardPlayer = styled.div`
+  width: 220px;
+  height: 300px;
+  background-image: ${props => `url(${props.photo})`};
+  background-color: red;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: -10px -6px;
+  position: relative;
+  border-radius: 12px;
+`;
+
+export const Nickname = styled.div`
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  font-weight: 700;
+`;
+
+export const StatsIcon = styled.div`
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+`;
