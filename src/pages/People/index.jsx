@@ -14,11 +14,7 @@ import {
   StatsIcon,
 } from "./style";
 import { Icon, PageTitle, CardPlayer } from "../../atoms";
-import {
-  IconAdmins,
-  IconTeams,
-  IconStreamers
-} from "../../ui/assets/icons";
+import { IconAdmins, IconTeams, IconStreamers } from "../../ui/assets/icons";
 import Inter from "../../ui/typography/inter";
 import { withMediaQueries } from "../../hoc/withMediaQueries";
 
@@ -107,7 +103,7 @@ const Join = ({}) => {
       </TitleSection>
       <Content>
         {/* ADMINS */}
-        {menuActive === "admins" && (
+        {menuActive === "admins" &&
           listAdmins.map((admin, index) => (
             <CardPlayer
               srcIG={admin.fields.urlInstagram}
@@ -118,8 +114,7 @@ const Join = ({}) => {
               nickname={admin.fields.nickname}
               role={admin.fields.role}
             />
-          ))
-        )}
+          ))}
         {/* TEAMS */}
         {menuActive === "teams" &&
           gamesList?.map((game, index) => (
@@ -138,6 +133,11 @@ const Join = ({}) => {
                         key={index}
                         photo={player.fields.photo.fields.file.url}
                         nickname={player.fields.nickname}
+                        platform={player.fields.platform}
+                        role={player.fields.role}
+                        level="266"
+                        rankedKd="1.5"
+                        winrate="56%"
                       />
                     )
                 )}
@@ -145,7 +145,7 @@ const Join = ({}) => {
             </Game>
           ))}
         {/* STREAMERS */}
-        {menuActive === "streamers" && (
+        {menuActive === "streamers" &&
           listStreamers.map((streamer, index) => (
             <CardPlayer
               srcIG={streamer.fields.urlInstagram}
@@ -156,8 +156,7 @@ const Join = ({}) => {
               nickname={streamer.fields.nickname}
               role="Streamer"
             />
-          ))
-        )}
+          ))}
       </Content>
     </JoinContainer>
   );

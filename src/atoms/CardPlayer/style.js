@@ -63,4 +63,30 @@ export const OverlayStats = styled.div`
   left: 0;
   background: ${theme.colors.gradients.dark};
   opacity: .9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0 16px;
+  padding-bottom: 70px;
 `;
+
+export const InfoPlayer = styled.div`
+  display: flex;
+  margin-bottom: 15px;
+`;
+export const Platform = styled.div`
+  margin-right: 10px;
+`;
+export const RoleOverlay = styled.div`
+`;
+export const StatsRow = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+`;
+export const Level = styled.div`
+`;
+export const RankedKD = styled.div`
+`;
+export const Winrate = styled.div``;

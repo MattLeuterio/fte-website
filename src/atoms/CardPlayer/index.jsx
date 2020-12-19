@@ -8,7 +8,14 @@ import {
   Nickname,
   StatsIcon,
   OverlayStats,
-  Role
+  Role,
+  InfoPlayer,
+  Platform,
+  RoleOverlay,
+  StatsRow,
+  Level,
+  RankedKD,
+  Winrate,
 } from "./style";
 import {
   IconStats,
@@ -17,17 +24,30 @@ import {
   IconTwitch,
   IconTW,
 } from "../../ui/assets/icons";
+import Inter from "../../ui/typography/inter";
 
-const CardPlayer = ({ cardType, srcIG, srcTwitch, srcTW, photo, role, nickname }) => {
+const CardPlayer = ({
+  cardType,
+  srcIG,
+  srcTwitch,
+  srcTW,
+  photo,
+  role,
+  nickname,
+  platform,
+  level,
+  rankedKd,
+  winrate,
+}) => {
   const [stats, setStats] = useState(false);
 
   return (
     <Card photo={photo}>
       <Socials>
         {srcIG && (
-        <Link href={srcIG} target="_blank">
-          <Icon icon={IconInstagram} />
-        </Link>
+          <Link href={srcIG} target="_blank">
+            <Icon icon={IconInstagram} />
+          </Link>
         )}
         {cardType === "admins" && srcTwitch && (
           <Link href={srcTwitch} target="_blank">
@@ -54,17 +74,36 @@ const CardPlayer = ({ cardType, srcIG, srcTwitch, srcTW, photo, role, nickname }
           />
         </StatsIcon>
       )}
-      {cardType === "admins" && (
-        <Role>
-          {role}
-        </Role>
+      {cardType === "admins" && <Role>{role}</Role>}
+      {cardType === "streamers" && <Role>{role}</Role>}
+      {stats && (
+        <OverlayStats>
+          <InfoPlayer>
+            <Platform>
+              <Inter type="labelUppercase">Platform</Inter>
+              <Inter type="gameUppercase">{platform}</Inter>
+            </Platform>
+            <RoleOverlay>
+              <Inter type="labelUppercase">Role</Inter>
+              <Inter type="gameUppercase">{role}</Inter>
+            </RoleOverlay>
+          </InfoPlayer>
+          <StatsRow>
+            <Level>
+              <Inter type="labelUppercase">Level</Inter>
+              <Inter type="gameUppercase">{level}</Inter>
+            </Level>
+            <RankedKD>
+              <Inter type="labelUppercase">RankedKD</Inter>
+              <Inter type="gameUppercase">{rankedKd}</Inter>
+            </RankedKD>
+            <Winrate>
+              <Inter type="labelUppercase">Winrate</Inter>
+              <Inter type="gameUppercase">{winrate}</Inter>
+            </Winrate>
+          </StatsRow>
+        </OverlayStats>
       )}
-      {cardType === "streamers" && (
-        <Role>
-          {role}
-        </Role>
-      )}
-      {stats && <OverlayStats></OverlayStats>}
     </Card>
   );
 };
