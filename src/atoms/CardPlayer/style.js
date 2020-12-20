@@ -5,7 +5,6 @@ export const Card = styled.div`
   width: 220px;
   height: 300px;
   background: ${props => `url(${props.photo})`};
-  background-color: red;
   background-size: 120%;
   background-repeat: no-repeat;
   background-position: -10px -6px;
