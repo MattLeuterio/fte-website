@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Icon from "../Icon";
 import {
@@ -88,7 +88,7 @@ const CardPlayer = ({
               <Inter type="gameUppercase">{role}</Inter>
             </RoleOverlay>
           </InfoPlayer>
-          <StatsRow>
+          {/* <StatsRow>
             <Level>
               <Inter type="labelUppercase">Level</Inter>
               <Inter type="gameUppercase">{level}</Inter>
@@ -101,7 +101,7 @@ const CardPlayer = ({
               <Inter type="labelUppercase">Winrate</Inter>
               <Inter type="gameUppercase">{winrate}</Inter>
             </Winrate>
-          </StatsRow>
+          </StatsRow> */}
         </OverlayStats>
       )}
     </Card>
