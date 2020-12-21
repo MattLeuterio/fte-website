@@ -13,6 +13,8 @@ import IconTeams from "./icon-teams.png";
 import IconStreamers from "./icon-streamers.png";
 import IconTwitch from "./icon-twitch.png";
 import IconTW from "./icon-tw.png";
+import IconClose from "./icon-close.png";
+import IconUrgent from "./icon-urgent.png";
 
 // Nav
 import IconHome from "./nav/icon-home.png";
@@ -72,5 +74,7 @@ export {
   IconTeams,
   IconStreamers,
   IconTwitch,
-  IconTW
+  IconTW,
+  IconClose,
+  IconUrgent
 };

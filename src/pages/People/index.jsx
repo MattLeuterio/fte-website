@@ -135,9 +135,6 @@ const Join = ({}) => {
                         nickname={player.fields.nickname}
                         platform={player.fields.platform}
                         role={player.fields.role}
-                        level="266"
-                        rankedKd="1.5"
-                        winrate="56%"
                       />
                     )
                 )}

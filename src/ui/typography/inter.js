@@ -123,10 +123,23 @@ const types = {
     fontWeight: 700,
     textTransform: 'capitalize'
   },
-  peopleGameTitle : {
+  peopleGameTitle: {
     fontSize: 18,
     fontWeight: 700,
     textTransform: 'capitalize'
+  },
+  modalTitle: {
+    fontSize: 24,
+    fontWeight: 700,
+    color: theme.colors.primary.gray
+  },
+  cardNotifyTitle: {
+    fontSize: 17,
+    fontWeight: 700
+  },
+  cardNotifyDescription: {
+    fontSize: 12,
+    fontWeight: 400
   }
 }  
 

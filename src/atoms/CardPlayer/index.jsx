@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Icon from "../Icon";
 import {
@@ -12,10 +12,10 @@ import {
   InfoPlayer,
   Platform,
   RoleOverlay,
-  StatsRow,
-  Level,
-  RankedKD,
-  Winrate,
+  // StatsRow,
+  // Level,
+  // RankedKD,
+  // Winrate,
 } from "./style";
 import {
   IconStats,
@@ -35,9 +35,9 @@ const CardPlayer = ({
   role,
   nickname,
   platform,
-  level,
-  rankedKd,
-  winrate,
+  // level,
+  // rankedKd,
+  // winrate,
 }) => {
   const [stats, setStats] = useState(false);
 
@@ -108,6 +108,14 @@ const CardPlayer = ({
   );
 };
 
-CardPlayer.propTypes = {};
+CardPlayer.propTypes = {
+  cardType: PropTypes.string,
+  srcIG: PropTypes.string,
+  srcTwitch: PropTypes.string,
+  photo: PropTypes.string,
+  role: PropTypes.string,
+  nickname: PropTypes.string,
+  platform: PropTypes.string,
+};
 
 export default CardPlayer;

@@ -8,6 +8,7 @@ import Link from './Link';
 import ToggleSection from './ToggleSection';
 import NoResult from './NoResult';
 import CardPlayer from './CardPlayer';
+import CardNotify from './CardNotify';
 
 export {
   Icon,
@@ -19,5 +20,6 @@ export {
   Link,
   ToggleSection,
   NoResult,
-  CardPlayer
+  CardPlayer,
+  CardNotify
 };
