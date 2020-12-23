@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import theme from '../../ui/theme';
-import bg from "../../ui/assets/img/backgrounds/bg-sledge.jpg"
 import { HeaderMobileHeight, FooterMobileHeight, NavBarWidth } from '../../const.js';
 
 export const PageContainer = styled.div`
@@ -22,7 +21,7 @@ export const Background = styled.div`
   left: 0;
   width: 100%;
   height: 90%;
-  background-image: linear-gradient(163.19deg,rgb(7 255 155 / 71%) -155.67%,rgb(34 52 60) 54.21%),url(${bg});
+  background-image: linear-gradient(163.19deg,rgb(7 255 155 / 71%) -155.67%,rgb(34 52 60) 54.21%),url(${props => props.bgs});
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
