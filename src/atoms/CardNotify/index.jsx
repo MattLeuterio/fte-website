@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import Icon from "../Icon";
 import {
   Card,
-  Title,
-  Description,
+  Link
 } from "./style";
 import {
   IconUrgent,
@@ -17,22 +16,17 @@ const CardNotify = ({
   title,
   description,
   urgent,
+  onClick,
   url
 }) => {
-
-  const onClickCardHandler = (cardType) => {
-    console.log('cardtypeeee', cardType)
-    cardType.value === "Search Player" ? (
-      console.log('searchplayer')
-    ) : (
-      cardType === "Result" ? (console.log('result')) : (console.log('external')
-      ))
-  }
+  
   return (
-    <Card cardType={cardType} onClick={(cardType) => onClickCardHandler(cardType)}>
-      <Icon icon={urgent ? IconUrgent : IconNotify} size={15} />
-      <Inter type="cardNotifyTitle">{title}</Inter>
-      <Inter type="cardNotifyDescription">{description}</Inter>
+    <Card cardType={cardType} onClick={onClick}>
+      <Link href={url} target="_blank">
+        <Icon icon={urgent ? IconUrgent : IconNotify} size={15} />
+        <Inter type="cardNotifyTitle">{title}</Inter>
+        <Inter type="cardNotifyDescription">{description}</Inter>
+      </Link>
     </Card>
   );
 };

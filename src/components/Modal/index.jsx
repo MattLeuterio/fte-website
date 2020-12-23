@@ -24,8 +24,10 @@ useEffect(() => {
 }, [])
 
   console.log('Notify', listNotifies);
-  const onClickCardHandler = (cardType) => {
-    console.log('cardtypeeee', cardType)
+
+  const onClickCardHandler = (cardType, url) => {
+    console.log('cardtypeeee', cardType);
+
     cardType === "Search Player" ? (
       console.log('searchplayer')
     ) : (
@@ -44,10 +46,14 @@ useEffect(() => {
             console.log(notify.fields.notifyType)
             return (
             <CardNotify
-              onClick={() => onClickCardHandler(notify.fields.notifyType)}
+              //onClick={() => onClickCardHandler(notify.fields.notifyType, notify.fields.url)}
               urgent={notify.fields.urgent}
               title={notify.fields.title}
-              description={notify.fields.description} 
+              description={notify.fields.description}
+              url={ notify.fields.notifyType === "Search Player" ? "/join"
+               : (
+                notify.fields.notifyType === "Result" ? "/last-results" : notify.fields.url
+                )} 
             />
           )})}
         </Content>

@@ -41,11 +41,19 @@ export const ModalContainer = styled.div`
   > div:nth-child(2) {
     padding-bottom: 15px;
   }
+
+  @media ${theme.device.tabletL} {
+    min-width: 570px;
+    max-width: 570px;
+    min-height: 600px;
+    max-height: 600px;
+  }
 `;
 
 export const Content = styled.div`
   flex-grow: 1;
   overflow-y: auto;
+  padding-right: 10px;
 
   > div {
     margin: 10px 0;

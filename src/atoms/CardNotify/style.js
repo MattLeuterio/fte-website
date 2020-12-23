@@ -15,12 +15,16 @@ export const Card = styled.div`
     background-color: ${theme.colors.primary.lightAccent};
   }
 
+`;
+
+export const Link = styled.a`
+  color: inherit;
+
   > div:first-child {
     position: absolute;
     top: 12px;
     right: 15px;
   }
-
   > div:nth-child(2) {
     width: 93%;
     margin-bottom: 10px;

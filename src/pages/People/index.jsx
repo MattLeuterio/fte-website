@@ -10,8 +10,8 @@ import {
   Game,
   GameTitle,
   GamePlayers,
-  Nickname,
-  StatsIcon,
+  // Nickname,
+  // StatsIcon,
 } from "./style";
 import { Icon, PageTitle, CardPlayer } from "../../atoms";
 import { IconAdmins, IconTeams, IconStreamers } from "../../ui/assets/icons";
@@ -20,7 +20,7 @@ import { withMediaQueries } from "../../hoc/withMediaQueries";
 
 const contentful = require("contentful");
 
-const Join = ({}) => {
+const Join = () => {
   const [listPlayers, setListPlayers] = useState([]);
   const [listAdmins, setListAdmins] = useState([]);
   const [listStreamers, setListStreamers] = useState([]);
