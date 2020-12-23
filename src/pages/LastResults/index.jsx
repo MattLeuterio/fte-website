@@ -30,8 +30,6 @@ const LastResults = ({ result }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(listResults);
-
   const calcResults = (fte, opponent) => {
     let result = "";
 
@@ -43,8 +41,6 @@ const LastResults = ({ result }) => {
 
     return result;
   };
-
-  console.log(calcResults(8, 7));
 
   return (
     <LastResultsContainer>

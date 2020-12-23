@@ -70,7 +70,22 @@ export const Game = styled.div`
 export const GameTitle = styled.div`
   margin-bottom: 15px;
 `;
-export const GamePlayers = styled.div``;
+export const PeopleRow = styled.div`
+  display: flex;
+  overflow-x: auto;
+
+  > div:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  @media ${theme.device.tabletL} {
+    flex-wrap: wrap;
+
+    > div {
+      margin-bottom: 15px;
+    }
+  }
+`;
 export const CardPlayer = styled.div`
   width: 220px;
   height: 300px;

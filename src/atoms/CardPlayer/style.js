@@ -3,7 +3,9 @@ import theme from '../../ui/theme';
 
 export const Card = styled.div`
   width: 220px;
+  min-width: 220px;
   height: 300px;
+  min-height: 300px;
   background: ${props => `url(${props.photo})`};
   background-size: 120%;
   background-repeat: no-repeat;
@@ -11,7 +13,7 @@ export const Card = styled.div`
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  transition: all 2s;
+  transition: all .5s;
 `;
 
 export const Socials = styled.div`
@@ -76,8 +78,15 @@ export const InfoPlayer = styled.div`
 `;
 export const Platform = styled.div`
   margin-right: 10px;
+
+  > div:first-child {
+    margin-bottom: 3px;
+  }
 `;
 export const RoleOverlay = styled.div`
+  > div:first-child {
+    margin-bottom: 3px;
+  }
 `;
 export const StatsRow = styled.div`
   display: flex;

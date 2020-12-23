@@ -23,18 +23,6 @@ useEffect(() => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [])
 
-  console.log('Notify', listNotifies);
-
-  const onClickCardHandler = (cardType, url) => {
-    console.log('cardtypeeee', cardType);
-
-    cardType === "Search Player" ? (
-      console.log('searchplayer')
-    ) : (
-      cardType === "Result" ? (console.log('result')) : (console.log('external')
-      ))
-  }
-
   return (
     <>
       <Overlay onClick={onClick} />
@@ -42,9 +30,7 @@ useEffect(() => {
         <Icon icon={IconClose} size={17} onClick={onClick}/>
         <Inter type="modalTitle">Last updates</Inter>
         <Content>
-          {listNotifies.map(notify => {
-            console.log(notify.fields.notifyType)
-            return (
+          {listNotifies.map(notify => (
             <CardNotify
               //onClick={() => onClickCardHandler(notify.fields.notifyType, notify.fields.url)}
               urgent={notify.fields.urgent}
@@ -55,7 +41,7 @@ useEffect(() => {
                 notify.fields.notifyType === "Result" ? "/last-results" : notify.fields.url
                 )} 
             />
-          )})}
+          ))}
         </Content>
       </ModalContainer>
     </>

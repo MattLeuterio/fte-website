@@ -39,8 +39,12 @@ export const Image = styled.img`
 `;
 
 export const Slogan = styled.div`
-  width: 350px;
+  width: 360px;
   text-align: center;
+
+  @media ${theme.device.tabletL} {
+    width: 400px;
+  }
 
   h1 {
     font-size: 48px;

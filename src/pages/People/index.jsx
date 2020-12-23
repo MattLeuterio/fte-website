@@ -10,6 +10,7 @@ import {
   Game,
   GameTitle,
   GamePlayers,
+  PeopleRow
   // Nickname,
   // StatsIcon,
 } from "./style";
@@ -59,11 +60,6 @@ const Join = () => {
     return gamesList;
   });
 
-  console.log("listPlayers", listPlayers);
-  console.log("gamesList", gamesList);
-  console.log("listAdmins", listAdmins);
-  console.log("listStreamers", listStreamers);
-
   const MenuElements = () => {
     const elements = [
       {
@@ -104,7 +100,8 @@ const Join = () => {
       <Content>
         {/* ADMINS */}
         {menuActive === "admins" &&
-          listAdmins.map((admin, index) => (
+        <PeopleRow>
+          {listAdmins.map((admin, index) => (
             <CardPlayer
               srcIG={admin.fields.urlInstagram}
               srcTwitch={admin.fields.urlTwitch}
@@ -115,6 +112,8 @@ const Join = () => {
               role={admin.fields.role}
             />
           ))}
+        </PeopleRow>
+        }
         {/* TEAMS */}
         {menuActive === "teams" &&
           gamesList?.map((game, index) => (
@@ -122,7 +121,7 @@ const Join = () => {
               <GameTitle>
                 <Inter type="peopleGameTitle">{game}</Inter>
               </GameTitle>
-              <GamePlayers>
+              <PeopleRow>
                 {listPlayers.map(
                   (player, index) =>
                     game === player.fields.game && (
@@ -138,12 +137,13 @@ const Join = () => {
                       />
                     )
                 )}
-              </GamePlayers>
+              </PeopleRow>
             </Game>
           ))}
         {/* STREAMERS */}
         {menuActive === "streamers" &&
-          listStreamers.map((streamer, index) => (
+        <PeopleRow>
+          {listStreamers.map((streamer, index) => (
             <CardPlayer
               srcIG={streamer.fields.urlInstagram}
               srcTwitch={streamer.fields.urlTwitch}
@@ -154,6 +154,8 @@ const Join = () => {
               role="Streamer"
             />
           ))}
+        </PeopleRow>
+        }
       </Content>
     </JoinContainer>
   );
