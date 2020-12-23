@@ -19,7 +19,7 @@ export const ButtonCTN = styled.button`
   border: 0;
   border-radius: 12px;
   box-shadow: ${theme.utility.boxShadowDown};
-  padding: 15px 120px;
+  padding: ${props => props.padding};
   display: flex;
   font-weight: bold;
 

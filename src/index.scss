@@ -25,6 +25,11 @@ code {
     monospace;
 }
 
+@keyframes cookie {
+  from {transform: translateX(100%);}
+  to {transform: translateX(-50%);}
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

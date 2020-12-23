@@ -13,7 +13,7 @@ import {
 } from './pages'
 import { GlobalLayout } from './components';
 
-function App() {
+const App = () => {
   const location = useLocation();
 
   return (

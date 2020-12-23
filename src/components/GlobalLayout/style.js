@@ -19,7 +19,7 @@ export const Background = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 90%;
   background-image: linear-gradient(163.19deg,rgb(7 255 155 / 71%) -155.67%,rgb(34 52 60) 54.21%),url(${props => props.bgs});
   background-repeat: no-repeat;
@@ -31,4 +31,33 @@ export const Background = styled.div`
   @media ${theme.device.tabletL} {
     background-position-y: top;  
   }
+`;
+
+export const Cookie = styled.div`
+  position: fixed;
+  bottom: calc(20px + ${FooterMobileHeight}px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #232323;
+  box-shadow: ${theme.utility.boxShadowUp};
+  padding: 20px 30px;
+  border-radius: 12px;
+  z-index: ${theme.zIndex.absoluteUp};
+  width: 90%;
+  animation: cookie 2s ease-in-out;
+
+  @media ${theme.device.tabletL} {
+    bottom: 20px;
+    flex-direction: row;
+    width: 60%;
+  }
+  `;
+
+export const Text = styled.div`
+  flex-grow: 1;
+  margin-bottom: 15px;
 `;

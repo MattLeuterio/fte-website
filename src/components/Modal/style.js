@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import theme from '../../ui/theme';
-import { HeaderMobileHeight, FooterMobileHeight, NavBarWidth } from '../../const.js';
 
 export const Overlay = styled.div`
   width: 100%;

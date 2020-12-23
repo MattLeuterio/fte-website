@@ -1,17 +1,43 @@
 import React from "react";
+import { useCookies } from "react-cookie";
 
 import { Menu } from "../index";
-import { PageContainer, Background } from "./style";
+import { PageContainer, Background, Cookie, Text } from "./style";
 import { withMediaQueries } from "../../hoc/withMediaQueries";
-import { SocialsRow } from "../../atoms";
+import { Button, SocialsRow } from "../../atoms";
 import { BgR6, BgCod, BgCounterStrike, BgValorant } from "../../ui/assets/img/backgrounds"
+import Inter from "../../ui/typography/inter";
 
-const globalLayout = ({ children, mediaIsPhone }) => {
+const GlobalLayout = ({ children, mediaIsPhone }) => {
+  const [cookies, setCookie] = useCookies(["user"]);
   const bgs = [ BgR6, BgCod, BgCounterStrike, BgValorant ];
+
+  const handleCookie = () => {
+    setCookie("user", "accept", {
+      path: "/"
+    })
+    console.log(cookies)
+  };
+
+  console.log(cookies);
 
   return (
     <>
       <Background bgs={bgs[Math.floor(Math.random() * 4)]}/>
+      {!cookies.user && (
+      <Cookie>
+        <Text>
+          <Inter type="cardNotifyDescription">
+            We use cookies and other tracking technologies to improve your browsing experience on our website, to show you personalized content and targeted ads, to analyze our website traffic, and to understand where our visitors are coming from.
+          </Inter>
+        </Text>
+        <Button 
+          text="Accept"
+          onClick={() => handleCookie()} 
+          padding="10px 70px"
+          />
+      </Cookie>
+      )}
       <Menu />
       {!mediaIsPhone && <SocialsRow />}
       <PageContainer>{children}</PageContainer>
@@ -19,4 +45,4 @@ const globalLayout = ({ children, mediaIsPhone }) => {
   );
 };
 
-export default withMediaQueries(globalLayout);
+export default withMediaQueries(GlobalLayout);
