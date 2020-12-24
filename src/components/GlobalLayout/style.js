@@ -60,4 +60,9 @@ export const Cookie = styled.div`
 export const Text = styled.div`
   flex-grow: 1;
   margin-bottom: 15px;
+
+  @media ${theme.device.tabletL} {
+    margin-bottom: 0px;
+    margin-right: 15px;
+  }
 `;

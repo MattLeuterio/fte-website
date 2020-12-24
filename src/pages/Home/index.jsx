@@ -23,7 +23,6 @@ const Home = (context) => {
       </Slogan>
       <CallToAction>
         <Inter type="slogan">Never just a game</Inter>
-        <Inter type="pageSubtitleLarge">Lorem ipsum.</Inter>
         <Button text="Join us" onClick={() => context.history.push("/join")} />
       </CallToAction>
     </HomeContainer>

@@ -9,7 +9,7 @@ export const SocialsRowContainer = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding: 0px 60px;
-  z-index: ${theme.zIndex.menus};
+  z-index: ${theme.zIndex.body};
 
   a:not(:first-child) {
     margin-left: 20px;

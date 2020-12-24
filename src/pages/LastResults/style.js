@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { motion } from "framer-motion";
 import theme from "../../ui/theme";
 
-export const LastResultsContainer = styled(motion.div)`
+export const LastResultsContainer = styled.div`
   min-width: 100%;
   min-height: 100%;
   padding: 55px 30px 120px;

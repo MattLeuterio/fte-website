@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import { HeaderMobileHeight, FooterMobileHeight, NavBarWidth } from '../../const.js';
 import theme from '../../ui/theme';
-import { motion } from "framer-motion";
 
-export const HomeContainer = styled(motion.div)`
+export const HomeContainer = styled.div`
   min-width: 100%;
   display: flex;
   flex-direction: column;

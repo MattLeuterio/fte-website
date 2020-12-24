@@ -1,6 +1,5 @@
 import React from 'react';
 import {Route, Switch, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
 import "./ui/scss/App.scss";
 
 import {
@@ -17,7 +16,6 @@ const App = () => {
   const location = useLocation();
 
   return (
-      <AnimatePresence exitBeforeEnter>
         <GlobalLayout>
           <Switch location={location} key={location.key}>
             <Route exact path="/last-results" component={LastResults} />
@@ -28,7 +26,6 @@ const App = () => {
             <Route component={PageNotFound} />
           </Switch> 
         </GlobalLayout>
-      </AnimatePresence>
   );
 }
 
