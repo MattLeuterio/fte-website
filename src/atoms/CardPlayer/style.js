@@ -6,10 +6,12 @@ export const Card = styled.div`
   min-width: 220px;
   height: 300px;
   min-height: 300px;
-  background: ${props => `url(${props.photo})`};
+  background: 
+  linear-gradient(163.19deg,rgb(249 255 252 / 0%) -155.67%, rgb(0 0 0 / 45%) 54.21%),
+    ${props => `url(${props.photo})`};
   background-size: 120%;
   background-repeat: no-repeat;
-  background-position: -10px -6px;
+  background-position: -23px 0px;
   position: relative;
   border-radius: 12px;
   overflow: hidden;
@@ -91,10 +93,23 @@ export const RoleOverlay = styled.div`
 export const StatsRow = styled.div`
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-bottom: 15px;
 `;
-export const Level = styled.div`
+export const Birthyear = styled.div`
+  margin-right: 10px;
+
+  > div:first-child {
+    margin-bottom: 3px;
+  }
 `;
-export const RankedKD = styled.div`
+export const Nationality = styled.div`
+  > div:first-child {
+      margin-bottom: 3px;
+    }
 `;
-export const Winrate = styled.div``;
+export const Sens = styled.div`
+  > div:first-child {
+    margin-bottom: 3px;
+  }
+`;

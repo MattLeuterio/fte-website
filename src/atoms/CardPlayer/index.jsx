@@ -12,10 +12,10 @@ import {
   InfoPlayer,
   Platform,
   RoleOverlay,
-  // StatsRow,
-  // Level,
-  // RankedKD,
-  // Winrate,
+  StatsRow,
+  Birthyear,
+  Nationality,
+  Sens,
 } from "./style";
 import {
   IconStats,
@@ -35,9 +35,9 @@ const CardPlayer = ({
   role,
   nickname,
   platform,
-  // level,
-  // rankedKd,
-  // winrate,
+  birthyear,
+  nationality,
+  sens,
 }) => {
   const [stats, setStats] = useState(false);
 
@@ -88,20 +88,20 @@ const CardPlayer = ({
               <Inter type="gameUppercase">{role}</Inter>
             </RoleOverlay>
           </InfoPlayer>
-          {/* <StatsRow>
-            <Level>
-              <Inter type="labelUppercase">Level</Inter>
-              <Inter type="gameUppercase">{level}</Inter>
-            </Level>
-            <RankedKD>
-              <Inter type="labelUppercase">RankedKD</Inter>
-              <Inter type="gameUppercase">{rankedKd}</Inter>
-            </RankedKD>
-            <Winrate>
-              <Inter type="labelUppercase">Winrate</Inter>
-              <Inter type="gameUppercase">{winrate}</Inter>
-            </Winrate>
-          </StatsRow> */}
+          <StatsRow>
+            <Birthyear>
+              <Inter type="labelUppercase">Year</Inter>
+              <Inter type="gameUppercase">{birthyear}</Inter>
+            </Birthyear>
+            <Nationality>
+              <Inter type="labelUppercase">Nationality</Inter>
+              <Inter type="gameUppercase">{nationality}</Inter>
+            </Nationality>
+          </StatsRow>
+          <Sens>
+            <Inter type="labelUppercase">Sens</Inter>
+            <Inter type="gameUppercase">{sens}</Inter>
+          </Sens>
         </OverlayStats>
       )}
     </Card>

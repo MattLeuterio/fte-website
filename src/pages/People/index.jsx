@@ -10,7 +10,7 @@ import {
   Game,
   GameTitle,
   GamePlayers,
-  PeopleRow
+  PeopleRow,
   // Nickname,
   // StatsIcon,
 } from "./style";
@@ -99,21 +99,21 @@ const Join = () => {
       </TitleSection>
       <Content>
         {/* ADMINS */}
-        {menuActive === "admins" &&
-        <PeopleRow>
-          {listAdmins.map((admin, index) => (
-            <CardPlayer
-              srcIG={admin.fields.urlInstagram}
-              srcTwitch={admin.fields.urlTwitch}
-              cardType={menuActive}
-              key={index}
-              photo={admin.fields.photo.fields.file.url}
-              nickname={admin.fields.nickname}
-              role={admin.fields.role}
-            />
-          ))}
-        </PeopleRow>
-        }
+        {menuActive === "admins" && (
+          <PeopleRow>
+            {listAdmins.map((admin, index) => (
+              <CardPlayer
+                srcIG={admin.fields.urlInstagram}
+                srcTwitch={admin.fields.urlTwitch}
+                cardType={menuActive}
+                key={index}
+                photo={admin.fields.photo.fields.file.url}
+                nickname={admin.fields.nickname}
+                role={admin.fields.role}
+              />
+            ))}
+          </PeopleRow>
+        )}
         {/* TEAMS */}
         {menuActive === "teams" &&
           gamesList?.map((game, index) => (
@@ -134,6 +134,9 @@ const Join = () => {
                         nickname={player.fields.nickname}
                         platform={player.fields.platform}
                         role={player.fields.role}
+                        birthyear={player.fields.birthyear}
+                        nationality={player.fields.nationality}
+                        sens={player.fields.sens}
                       />
                     )
                 )}
@@ -141,21 +144,21 @@ const Join = () => {
             </Game>
           ))}
         {/* STREAMERS */}
-        {menuActive === "streamers" &&
-        <PeopleRow>
-          {listStreamers.map((streamer, index) => (
-            <CardPlayer
-              srcIG={streamer.fields.urlInstagram}
-              srcTwitch={streamer.fields.urlTwitch}
-              cardType={menuActive}
-              key={index}
-              photo={streamer.fields.photo.fields.file.url}
-              nickname={streamer.fields.nickname}
-              role="Streamer"
-            />
-          ))}
-        </PeopleRow>
-        }
+        {menuActive === "streamers" && (
+          <PeopleRow>
+            {listStreamers.map((streamer, index) => (
+              <CardPlayer
+                srcIG={streamer.fields.urlInstagram}
+                srcTwitch={streamer.fields.urlTwitch}
+                cardType={menuActive}
+                key={index}
+                photo={streamer.fields.photo.fields.file.url}
+                nickname={streamer.fields.nickname}
+                role="Streamer"
+              />
+            ))}
+          </PeopleRow>
+        )}
       </Content>
     </JoinContainer>
   );

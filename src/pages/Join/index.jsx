@@ -41,7 +41,7 @@ const Join = () => {
       <PageTitle text="Join" />
       <Content>
         <LookingFor>
-          {list.length > 0 ? (
+          {list.length > 30 ? (
             list.map((item, index) => (
               <CardLookingFor key={index}>
                 <CardHeader>

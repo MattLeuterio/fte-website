@@ -33,6 +33,7 @@ export const LookingFor = styled.div`
     width: 70%;
     height: 100%;
     flex-wrap: wrap;
+    overflow-x: visible;
   } 
 `;
 export const CardLookingFor = styled.div`

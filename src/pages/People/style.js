@@ -92,7 +92,7 @@ export const CardPlayer = styled.div`
   background-color: red;
   background-size: 120%;
   background-repeat: no-repeat;
-  background-position: -10px -6px;
+  background-position: -23px 0px;
   position: relative;
   border-radius: 12px;
 `;
