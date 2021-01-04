@@ -53,6 +53,8 @@ export const DataResult = styled.div`
 `;
 
 export const Opponent = styled.div`
+  width: 260px;
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
 
@@ -64,11 +66,12 @@ export const Opponent = styled.div`
 
 `;
 export const MatchType = styled.div`
+  width: 260px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 500;
 `;
 
 export const Label = styled.div`
