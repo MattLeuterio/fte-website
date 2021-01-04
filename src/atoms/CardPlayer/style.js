@@ -30,6 +30,10 @@ export const Socials = styled.div`
 `;
 
 export const Link = styled.a`
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export const Nickname = styled.div`
