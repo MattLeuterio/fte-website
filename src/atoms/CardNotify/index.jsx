@@ -1,25 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Icon from "../Icon";
-import {
-  Card,
-  Link
-} from "./style";
-import {
-  IconUrgent,
-  IconNotify
-} from "../../ui/assets/icons";
+import { Card, Link } from "./style";
+import { IconUrgent, IconNotify } from "../../ui/assets/icons";
 import Inter from "../../ui/typography/inter";
 
-const CardNotify = ({
-  cardType,
-  title,
-  description,
-  urgent,
-  onClick,
-  url
-}) => {
-  
+const CardNotify = ({ cardType, title, description, urgent, onClick, url }) => {
   return (
     <Card cardType={cardType} onClick={onClick}>
       <Link href={url} target="_blank">
