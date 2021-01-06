@@ -25,8 +25,8 @@ export const MenuElementsContainer = styled.div`
 
     > div {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: ${props => props.isMobile ? '51%' : '52%'};
+      left: ${props => props.isMobile ? '51%' : '52%'};
       transform: translate(-50%, -50%);
     }
     

@@ -72,9 +72,10 @@ export const GameTitle = styled.div`
 export const PeopleRow = styled.div`
   display: flex;
   overflow-x: auto;
+  padding: 10px 0;
 
   > div:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 20px;
   }
 
   @media ${theme.device.tabletL} {
@@ -84,17 +85,6 @@ export const PeopleRow = styled.div`
       margin-bottom: 15px;
     }
   }
-`;
-export const CardPlayer = styled.div`
-  width: 220px;
-  height: 300px;
-  background: ${props => `url(${props.photo})`};
-  background-color: red;
-  background-size: 120%;
-  background-repeat: no-repeat;
-  background-position: -23px 0px;
-  position: relative;
-  border-radius: 12px;
 `;
 
 export const Nickname = styled.div`

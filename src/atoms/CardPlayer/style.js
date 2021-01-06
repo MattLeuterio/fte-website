@@ -16,6 +16,14 @@ export const Card = styled.div`
   border-radius: 12px;
   overflow: hidden;
   transition: all .5s;
+
+  &:hover {
+    transform: scale(1.05);
+
+    &:first-child {
+      transform: scale(1.05) translateX(10px);
+    }
+  }
 `;
 
 export const Socials = styled.div`
