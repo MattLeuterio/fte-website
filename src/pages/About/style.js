@@ -4,7 +4,7 @@ import theme from "../../ui/theme";
 export const AboutContainer = styled.div`
   min-width: 100%;
   min-height: 100%;
-  padding: 55px 30px 120px;
+  padding: 55px 30px 160px;
 
   @media ${theme.device.tabletL} {
     padding: 180px 80px 50px;
@@ -51,6 +51,7 @@ export const Discord = styled.div`
   width: 100%;
   position: relative;
   margin-top: 20px;
+  margin-bottom: 30px;
   
   @media ${theme.device.tabletL} {
     margin-top: 0;
@@ -70,5 +71,18 @@ export const Discord = styled.div`
         bottom: 0;
       }
     }
+  }
+`;
+
+export const Copyright = styled.div`
+  position: absolute;
+  padding: 10px 0;
+  @media ${theme.device.tabletL} {
+    bottom: 30px;
+    left: 160px;
+  }
+
+  a {
+    color: inherit;
   }
 `;

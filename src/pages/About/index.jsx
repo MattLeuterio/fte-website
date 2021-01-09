@@ -14,6 +14,7 @@ import {
   Story,
   CallToActions,
   Discord,
+  Copyright,
 } from "./style";
 
 const about = ({ mediaIsPhone }) => {
@@ -66,6 +67,12 @@ const about = ({ mediaIsPhone }) => {
             </ToggleSection>
           </Discord>
         </CallToActions>
+        <Copyright>
+          Copyright &copy;2021 -{" "}
+          <a href="http://www.mattleuterio.dev" target="_blank">
+            Matt Leuterio
+          </a>
+        </Copyright>
       </Content>
     </AboutContainer>
   );

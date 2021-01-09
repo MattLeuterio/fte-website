@@ -108,7 +108,7 @@ const FormApply = () => {
         <Inter type="h3">Experience</Inter>
       </InputCtn>
       <Textarea rows="7" name="experience" />
-      <Input type="submit" value="Complete" />
+      <Input type="submit" value="Submit" />
       <Success>{emailSuccess}</Success>
     </Form>
   );
