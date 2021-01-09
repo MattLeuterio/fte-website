@@ -16,6 +16,7 @@ import Inter from "../../ui/typography/inter";
 const GlobalLayout = ({ children, mediaIsPhone }) => {
   const [cookies, setCookie] = useCookies(["user"]);
   const bgs = [BgR6, BgCod, BgCounterStrike, BgValorant];
+  const backgroundImg = bgs[0];
 
   const handleCookie = () => {
     setCookie("user", "accept", {
@@ -25,7 +26,7 @@ const GlobalLayout = ({ children, mediaIsPhone }) => {
 
   return (
     <>
-      <Background bgs={bgs[Math.floor(Math.random() * 4)]} />
+      <Background bgs={backgroundImg} />
       {!cookies.user && (
         <Cookie>
           <Text>

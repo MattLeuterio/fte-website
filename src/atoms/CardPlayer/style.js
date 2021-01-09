@@ -82,6 +82,7 @@ export const OverlayStats = styled.div`
   left: 0;
   background: ${theme.colors.gradients.dark};
   opacity: .9;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

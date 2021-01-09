@@ -19,8 +19,8 @@ export const Background = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 90%;
+  width: 600px;
+  height: 500px;
   background-image: linear-gradient(163.19deg,rgb(7 255 155 / 71%) -155.67%,rgb(34 52 60) 54.21%),url(${props => props.bgs});
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,6 +29,7 @@ export const Background = styled.div`
   background-position-y: calc(${HeaderMobileHeight}px - 10px);
 
   @media ${theme.device.tabletL} {
+    width: 100%;
     background-position-y: top;  
   }
 `;
