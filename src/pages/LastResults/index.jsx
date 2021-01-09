@@ -44,7 +44,7 @@ const LastResults = ({ result }) => {
 
   return (
     <LastResultsContainer>
-      <PageTitle text="Latest results" />
+      <PageTitle text="Latest results" subText="Freshness" />
       <Content>
         {listResults.length > 0 ? (
           listResults.map((item, index) => (

@@ -8,20 +8,18 @@ import {
   IconDiscordG,
 } from "../../ui/assets/icons";
 
-import containerVariants from "../../ui/containerVariants";
 import {
   AboutContainer,
   Content,
   Story,
-  // InstagramContainer,
   CallToActions,
   Discord,
 } from "./style";
 
-const about = ({ mediaIsPhone, isMobile }) => {
+const about = ({ mediaIsPhone }) => {
   return (
     <AboutContainer>
-      <PageTitle text="About" />
+      <PageTitle text="About" subText="Here we are!" />
       <Content>
         <Story>
           Flat Earth Esports was born in 2019 by a group of friends with the
@@ -36,7 +34,6 @@ const about = ({ mediaIsPhone, isMobile }) => {
           are interested in the project, do not hesitate to go in our Discord or
           apply to join one of our teams using the JOIN US page. #wearefte
         </Story>
-        {/* {!mediaIsPhone && <InstagramContainer></InstagramContainer>} */}
         <CallToActions>
           {mediaIsPhone && (
             <Link

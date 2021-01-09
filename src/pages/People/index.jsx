@@ -9,10 +9,7 @@ import {
   TitleSection,
   Game,
   GameTitle,
-  GamePlayers,
   PeopleRow,
-  // Nickname,
-  // StatsIcon,
 } from "./style";
 import { Icon, PageTitle, CardPlayer } from "../../atoms";
 import { IconAdmins, IconTeams, IconStreamers } from "../../ui/assets/icons";
@@ -92,7 +89,7 @@ const Join = () => {
 
   return (
     <JoinContainer>
-      <PageTitle text="People" />
+      <PageTitle text="People" subText="Our family" />
       <PeopleMenu>{MenuElements()}</PeopleMenu>
       <TitleSection>
         <Inter type="peopleSectionTitle">{menuActive}</Inter>

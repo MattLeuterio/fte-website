@@ -38,7 +38,7 @@ const Join = () => {
 
   return (
     <JoinContainer>
-      <PageTitle text="Join" />
+      <PageTitle text="Join" subText="Get in the game!" />
       <Content>
         <LookingFor>
           {list.length > 30 ? (
