@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { NoResultCTN } from "./style";
 import Inter from "../../ui/typography/inter";
 
-const Button = ({ sizeIcon, icon, text }) => {
+const NoResult = ({ text }) => {
   return (
     <NoResultCTN>
       <Inter>{text}</Inter>
@@ -11,13 +11,12 @@ const Button = ({ sizeIcon, icon, text }) => {
   );
 };
 
-Button.defaultProps = {
-  color: "#fff",
+NoResult.defaultProps = {
   text: "No Result",
 };
 
-Button.propTypes = {
+NoResult.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-export default Button;
+export default NoResult;

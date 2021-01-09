@@ -68,13 +68,13 @@ const Join = () => {
               </CardLookingFor>
             ))
           ) : (
-            <NoResult text="Non siamo alla ricerca di persone, ma se vuoi proporti compila il form." />
+            <NoResult text="In questo momento non cerchiamo nessuna figura specifica. Se vuoi proporti fai l'apply." />
           )}
         </LookingFor>
         <FormContainer>
           <FormDescription>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. In officia
-            delectus sed dolorem qui officiis vitae eum modi facilis similique.
+            Compila il form qui sotto per entrare a far parte di uno dei nostri
+            team. Verrai ricontattato il prima possibile da un nostro admin.
           </FormDescription>
           <Form>
             <ToggleSection text="Apply">

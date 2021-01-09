@@ -52,11 +52,15 @@ export const Nickname = styled.div`
   z-index: 1;
 `;
 
-export const StatsIcon = styled.div`
+export const StatsIcon = styled.a`
   position: absolute;
   bottom: 16px;
   right: 16px;
   z-index: 1;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export const Role = styled.div`

@@ -22,6 +22,7 @@ export const Content = styled.div`
 
 export const Story = styled.p`
   width: 100%;
+  line-height: 1.5;
   
   @media ${theme.device.tabletL} {
     width: 85%;
