@@ -68,13 +68,16 @@ const Join = () => {
               </CardLookingFor>
             ))
           ) : (
-            <NoResult text="In questo momento non cerchiamo nessuna figura specifica. Se vuoi proporti fai l'apply." />
+            <NoResult
+              text="At this moment we are not looking for any specific figure. If you want to join our team send your application."
+              widthCtn="50%"
+            />
           )}
         </LookingFor>
         <FormContainer>
           <FormDescription>
-            Compila il form qui sotto per entrare a far parte di uno dei nostri
-            team. Verrai ricontattato il prima possibile da un nostro admin.
+            Fill out the form below to join one of our teams. You will be
+            contacted as soon as possible by our admin.
           </FormDescription>
           <Form>
             <ToggleSection text="Apply">

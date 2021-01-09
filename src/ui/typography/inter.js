@@ -9,7 +9,7 @@ const baseConfig = {
   fontFamily: theme.fontset.inter,
   fontStyle: 'normal',
   fontWeight: 400,
-  lineHeight: 1,
+  lineHeight: 1.3,
   letterSpacing: 'unset',
   fontSize: FontBase
 };

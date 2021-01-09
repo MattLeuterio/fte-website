@@ -20,28 +20,21 @@ import {
 
 const about = ({ mediaIsPhone, isMobile }) => {
   return (
-    <AboutContainer
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-    >
+    <AboutContainer>
       <PageTitle text="About" />
       <Content>
         <Story>
-          Flat Earth Esports nasce nel 2019 da un gruppo di amici con la
-          passione per i videogames. In poco tempo siamo riusciti a creare una
-          bella community, team competitive su più titoli e un buon gruppo di
-          streamer, tutti ragazzi seri che lavorano per il bene
-          dell'associazione e della sua community. Il rispetto e la serietà sono
-          le nostre colonne portanti e tali virtù ci aspettiamo dalle persone
-          che entrano a far parte della nostra famiglia. I nostri obbiettivi
-          principali sono quelli di portare i ragazzi che compongono i vari team
-          a competere ai livelli più alti, espandere e mantenere sana la nostra
-          community e organizzare una spedizione sulla barriera di ghiaccio ai
-          confini della terra piatta. Se il progetto vi interessa non esitate ad
-          entrare nel nostro Discord o fare richiesta per entrare in uno dei
-          nostri team tramite la pagina JOIN US. #wearefte
+          Flat Earth Esports was born in 2019 by a group of friends with the
+          passion for videogames. In a short time we succeeded in creating a
+          nice community, competitive teams on multiple titles and a good group
+          of streamers, all serious guys working for the association’s sake and
+          its community. Respect and seriousness are our pillars and these
+          virtues we expect from the people who become part of our family. Our
+          main goals are to bring the guys of the various teams to compete at
+          the highest levels, expand and keep our community healthy and organize
+          an expedition on the ice barrier to the edge of the flat earth. If you
+          are interested in the project, do not hesitate to go in our Discord or
+          apply to join one of our teams using the JOIN US page. #wearefte
         </Story>
         {/* {!mediaIsPhone && <InstagramContainer></InstagramContainer>} */}
         <CallToActions>
@@ -70,8 +63,8 @@ const about = ({ mediaIsPhone, isMobile }) => {
           )}
           <Discord>
             <ToggleSection icon={IconDiscordG} text="Server Discord">
-              Clicca su JOIN ed entra nel nostro canale Discord. La famiglia FTE
-              ti sta aspettando.
+              Click on JOIN and come into our Discord channel. The FTE family is
+              waiting for you!
               <Link url="https://discord.gg/qPengpCjtu" text="Join" />
             </ToggleSection>
           </Discord>

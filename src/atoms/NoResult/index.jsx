@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { NoResultCTN } from "./style";
 import Inter from "../../ui/typography/inter";
 
-const NoResult = ({ text }) => {
+const NoResult = ({ text, widthCtn }) => {
   return (
-    <NoResultCTN>
+    <NoResultCTN widthCtn={widthCtn}>
       <Inter>{text}</Inter>
     </NoResultCTN>
   );
@@ -13,6 +13,7 @@ const NoResult = ({ text }) => {
 
 NoResult.defaultProps = {
   text: "No Result",
+  widthCtn: "100%",
 };
 
 NoResult.propTypes = {
