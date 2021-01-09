@@ -21,7 +21,7 @@ export const Background = styled.div`
   left: 0;
   width: 600px;
   height: 500px;
-  background-image: linear-gradient(163.19deg,rgb(7 255 155 / 71%) -155.67%,rgb(34 52 60) 54.21%),url(${props => props.bgs});
+  background-image: linear-gradient(169.19deg, rgba(7, 255, 155, 0.71) -155.67%, rgb(34, 52, 60) 52.21%),url(${props => props.bgs});
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
