@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -20,13 +20,12 @@ const HeaderElements = ({ sizeElements, sizeLogo, isMobile, mediaIsPhone }) => {
   const [listNotifies, setListNotifies] = useState([]);
   const [visibility, setVisibility] = useState(false);
 
-
-  const lastResultsPath = "/last-results";
+  const lastResultsPath = "/latest-results";
   const client = contentful.createClient({
     space: "pyt8t28zyl2v",
     accessToken: "FvEK9Z8tlrHzGtG0Zzuk3r9yUp0-mnv6sp3SQFDd58I",
   });
-  
+
   useEffect(() => {
     client.getEntries({ content_type: "notification" }).then((response) => {
       const res = response.items;
@@ -40,14 +39,15 @@ const HeaderElements = ({ sizeElements, sizeLogo, isMobile, mediaIsPhone }) => {
   };
   return (
     <>
-      { visibility && (
-          <Modal onClick={() => onClickHandler()} />
-        )
-      }
+      {visibility && <Modal onClick={() => onClickHandler()} />}
       <HeaderElementsContainer isMobile={mediaIsPhone}>
         {listNotifies.length > 0 ? (
-          <Icon onClick={() => onClickHandler()} icon={IconNotifyActive} size={sizeElements} />  
-          ) : (
+          <Icon
+            onClick={() => onClickHandler()}
+            icon={IconNotifyActive}
+            size={sizeElements}
+          />
+        ) : (
           <Icon icon={IconNotify} size={sizeElements} />
         )}
 
@@ -57,7 +57,7 @@ const HeaderElements = ({ sizeElements, sizeLogo, isMobile, mediaIsPhone }) => {
           </NavLink>
         )}
 
-        <NavLink to="/last-results" activeClassName="menuElementIsActive">
+        <NavLink to="/latest-results" activeClassName="menuElementIsActive">
           <Icon
             icon={
               window.location.pathname === lastResultsPath

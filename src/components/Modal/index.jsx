@@ -41,7 +41,7 @@ const Modal = ({ onClick }) => {
                 notify.fields.notifyType === "Search Player"
                   ? "/join"
                   : notify.fields.notifyType === "Result"
-                  ? "/last-results"
+                  ? "/latest-results"
                   : notify.fields.url
               }
             />

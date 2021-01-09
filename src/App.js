@@ -18,7 +18,7 @@ const App = () => {
   return (
         <GlobalLayout>
           <Switch location={location} key={location.key}>
-            <Route exact path="/last-results" component={LastResults} />
+            <Route exact path="/latest-results" component={LastResults} />
             <Route exact path="/people" component={People} />
             <Route exact path="/join" component={Join} />
             <Route exact path="/about" component={About} />
