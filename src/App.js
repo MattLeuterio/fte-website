@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Route, Switch, useLocation } from 'react-router-dom';
+import "./ui/scss/App.scss";
 
-function App() {
+import {
+  Home,
+  About,
+  Join,
+  People,
+  LastResults,
+  PageNotFound
+} from './pages'
+import { GlobalLayout } from './components';
+
+const App = () => {
+  const location = useLocation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <GlobalLayout>
+          <Switch location={location} key={location.key}>
+            <Route exact path="/last-results" component={LastResults} />
+            <Route exact path="/people" component={People} />
+            <Route exact path="/join" component={Join} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/" component={Home} />
+            <Route component={PageNotFound} />
+          </Switch> 
+        </GlobalLayout>
   );
 }
 
