@@ -46,11 +46,11 @@ export const Slogan = styled.div`
   }
 
   h1 {
-    font-size: 48px;
+    font-size: 28px;
     line-height: 0.9;
 
     span {
-      font-size: 58px;
+      font-size: 48px;
       display: inline-block;
       font-weight: bold;
       color: ${theme.colors.primary.green};
