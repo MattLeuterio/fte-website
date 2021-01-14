@@ -11,22 +11,14 @@ import {
   MatchType,
   Label,
 } from "./style";
+import { getContent } from "../../contentful";
 
-const contentful = require("contentful");
 
-const LastResults = ({ result }) => {
+const LastResults = () => {
   const [listResults, setListResults] = useState([]);
 
-  const client = contentful.createClient({
-    space: "pyt8t28zyl2v",
-    accessToken: "FvEK9Z8tlrHzGtG0Zzuk3r9yUp0-mnv6sp3SQFDd58I",
-  });
-
   useEffect(() => {
-    client.getEntries({ content_type: "results" }).then((response) => {
-      const res = response.items;
-      setListResults(res);
-    });
+    getContent("results", setListResults);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

@@ -17,22 +17,13 @@ import { IconLookingPerson } from "../../ui/assets/icons";
 import Inter from "../../ui/typography/inter";
 import { withMediaQueries } from "../../hoc/withMediaQueries";
 import { FormApply } from "../../components";
-
-const contentful = require("contentful");
+import { getContent } from "../../contentful";
 
 const Join = () => {
   const [list, setList] = useState([]);
 
-  const client = contentful.createClient({
-    space: "pyt8t28zyl2v",
-    accessToken: "FvEK9Z8tlrHzGtG0Zzuk3r9yUp0-mnv6sp3SQFDd58I",
-  });
-
   useEffect(() => {
-    client.getEntries({ content_type: "lookingFor" }).then((response) => {
-      const res = response.items;
-      setList(res);
-    });
+    getContent("lookingFor", setList);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

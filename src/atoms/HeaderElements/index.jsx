@@ -13,24 +13,17 @@ import {
 } from "../../ui/assets/icons";
 import Icon from "../Icon";
 import { Modal } from "../../components";
+import { getContent } from "../../contentful";
 
-const contentful = require("contentful");
 
 const HeaderElements = ({ sizeElements, sizeLogo, isMobile, mediaIsPhone }) => {
   const [listNotifies, setListNotifies] = useState([]);
   const [visibility, setVisibility] = useState(false);
 
   const lastResultsPath = "/latest-results";
-  const client = contentful.createClient({
-    space: "pyt8t28zyl2v",
-    accessToken: "FvEK9Z8tlrHzGtG0Zzuk3r9yUp0-mnv6sp3SQFDd58I",
-  });
 
   useEffect(() => {
-    client.getEntries({ content_type: "notification" }).then((response) => {
-      const res = response.items;
-      setListNotifies(res);
-    });
+    getContent("notification", setListNotifies);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
