@@ -3,7 +3,7 @@ export const breakpoint = {
   mobileM: 375,
   mobileL: 425,
   tablet: 768,
-  tabletL: 950,
+  tabletL: 1024,
   laptop: 1024,
   desktop: 1480
 };
@@ -13,7 +13,7 @@ const size = {
   mobileM: `${breakpoint.mobileM - 1}px`,
   mobileL: `${breakpoint.mobileL - 1}px`,
   tablet: `${breakpoint.tablet - 1}px`,
-  tabletL: `${breakpoint.tabletL - 1}px`,
+  tabletL: `${breakpoint.tabletL}px`,
   laptop: `${breakpoint.laptop - 1}px`,
   desktop: `${breakpoint.desktop - 1}px`
 };

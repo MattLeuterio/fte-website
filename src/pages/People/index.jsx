@@ -15,8 +15,7 @@ import { Icon, PageTitle, CardPlayer } from "../../atoms";
 import { IconAdmins, IconTeams, IconStreamers } from "../../ui/assets/icons";
 import Inter from "../../ui/typography/inter";
 import { withMediaQueries } from "../../hoc/withMediaQueries";
-
-const contentful = require("contentful");
+import { getContent } from "../../contentful";
 
 const Join = () => {
   const [listPlayers, setListPlayers] = useState([]);
@@ -24,31 +23,17 @@ const Join = () => {
   const [listStreamers, setListStreamers] = useState([]);
   const [menuActive, setMenuActive] = useState("teams");
   let gamesList = [];
-
-  const client = contentful.createClient({
-    space: "pyt8t28zyl2v",
-    accessToken: "FvEK9Z8tlrHzGtG0Zzuk3r9yUp0-mnv6sp3SQFDd58I",
-  });
-
+  
   useEffect(() => {
-    client.getEntries({ content_type: "players" }).then((response) => {
-      const res = response.items;
-      setListPlayers(res);
-    });
+    getContent("players", setListPlayers);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
-    client.getEntries({ content_type: "admins" }).then((response) => {
-      const res = response.items;
-      setListAdmins(res);
-    });
+    getContent("admins", setListAdmins);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
-    client.getEntries({ content_type: "streamers" }).then((response) => {
-      const res = response.items;
-      setListStreamers(res);
-    });
+    getContent("streamers", setListStreamers);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

@@ -3,7 +3,6 @@ import theme from '../../ui/theme';
 
 export const Card = styled.div`
   position: relative;
-  height: 100px;
   border-radius: 12px;
   overflow: hidden;
   padding: 18px;
