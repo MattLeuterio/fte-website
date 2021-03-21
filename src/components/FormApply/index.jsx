@@ -59,7 +59,7 @@ const FormApply = () => {
         <Label>
           <Icon icon={IconFormFullname} size={24} />
         </Label>
-        <Input placeholder="Nickname*" type="text" name="nickname" required />
+        <Input placeholder="Fullname*" type="text" name="fullname" required />
       </InputCtn>
       <InputCtn>
         <Label>

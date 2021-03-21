@@ -46,7 +46,8 @@ export const Input = styled.input`
 export const Textarea = styled.textarea`
   margin-top: 10px;
   margin-bottom: 20px;
-  background: transparent;
+  background: rgba(0, 0, 0, .1);
+  border-radius: 3px;
   border: none;
   border-bottom: 2px solid ${theme.colors.primary.lightGray};
   padding: 8px 5px;
